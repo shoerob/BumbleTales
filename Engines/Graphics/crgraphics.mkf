@@ -1,0 +1,30 @@
+includepaths 
+{ 
+}
+
+files
+{	
+	[Headers]
+	BackgroundInternal.h
+	FontInternal.h
+	Graphics.h
+	GraphicsEngineInternal.h
+	SceneGraph.h
+	SpriteInternal.h
+	TexturesInternal.h
+	TextureStruct.h
+	TileBackgroundInternal.h
+	Vertex.h
+	
+	[Source]
+	BackgroundInternal.cpp
+	FontInternal.cpp
+	Graphics.cpp
+	GraphicsEngineInternal.cpp
+	SceneGraph.cpp
+	SpriteInternal.cpp
+	TexturesInternal.cpp
+	TextureStruct.cpp
+	TileBackgroundInternal.cpp
+}
+

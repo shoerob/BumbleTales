@@ -1,0 +1,16 @@
+files
+{	
+	[Headers]
+	Record.h
+	RecordData.h
+	Database.h
+	DatabaseFwd.h
+	DatabaseImpl.h
+	
+	[Source]
+	Record.cpp
+	RecordData.cpp
+	Database.cpp
+	DatabaseImpl.cpp
+}
+

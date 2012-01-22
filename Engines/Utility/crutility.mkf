@@ -1,0 +1,28 @@
+files
+{	
+	[Headers]
+	BinaryReader.h
+	BinaryWriter.h
+	BinaryWriterFO.h
+	CacheAlignedArray.h
+	ClassFactory.h
+	Event.h
+	FSM.h
+	FunctionObjects.h
+	Guid.h
+	ISerializable.h
+	PowerOf2.h
+	Property.h
+	Singleton.h
+	Sorting.h
+	StringUtil.h
+	Timer.h
+	
+	[Source]
+	BinaryReader.cpp
+	BinaryWriter.cpp
+	Guid.cpp
+	StringUtil.cpp
+	Timer.cpp
+}
+
