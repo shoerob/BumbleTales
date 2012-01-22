@@ -1,0 +1,16 @@
+files
+{
+	[Headers]
+	snappy.h
+	
+	[Source]
+	snappy-internal.h
+	snappy.cc
+	snappy-sinksource.cc
+	snappy-sinksource.h
+	snappy-stubs-public.h
+	snappy-stubs-internal.h
+	snappy-stubs-internal.cc
+	
+}
+

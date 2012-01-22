@@ -1,0 +1,14 @@
+
+includepaths 
+{ 
+	include/lzo
+}
+
+files
+{
+	(minilzo)
+	[Source]
+	minilzo.h
+	minilzo.c	
+}
+

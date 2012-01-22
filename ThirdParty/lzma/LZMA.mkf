@@ -1,0 +1,16 @@
+files
+{
+	[Headers]
+	(C)
+	LzmaDec.h
+
+	[Source]
+	(C)
+	Alloc.h
+	LzFind.h
+	Types.h	
+	Alloc.c
+	LzFind.c
+	LzmaDec.c
+}
+

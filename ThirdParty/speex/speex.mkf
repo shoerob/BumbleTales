@@ -1,0 +1,13 @@
+files
+{
+	(C)
+	Alloc.h
+	LzFind.h
+	LzmaDec.h
+	Types.h
+	
+	Alloc.c
+	LzFind.c
+	LzmaDec.c
+}
+

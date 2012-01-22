@@ -1,0 +1,41 @@
+files
+{
+	[Headers]
+	ivorbisfile.h
+	
+	[Source]
+	os_types.h
+	os.h
+	registry.c
+	registry.h
+	window_lookup.h
+	window.c
+	window.h
+	asm_arm.h
+	backends.h
+	bitwise.c
+	block.c
+	block.h
+	codebook.c
+	codebook.h
+	codec_internal.h
+	config_types.h
+	floor0.c
+	floor1.c
+	framing.c
+	info.c
+	ivorbiscodec.h
+	lsp_lookup.h
+	mapping0.c
+	mdct_lookup.h
+	mdct.c
+	mdct.h
+	misc.h
+	ogg.h
+	res012.c
+	sharedbook.c
+	synthesis.c
+	vorbisfile.c
+	
+}
+
