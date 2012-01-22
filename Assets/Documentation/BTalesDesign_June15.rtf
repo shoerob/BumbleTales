@@ -1,0 +1,127 @@
+{\rtf1\ansi\ansicpg1252\cocoartf949\cocoasubrtf460
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 ArialMT;}
+{\colortbl;\red255\green255\blue255;\red207\green223\blue229;}
+\margl1440\margr1440\vieww14660\viewh22040\viewkind0
+\deftab720
+\pard\pardeftab720\ql\qnatural
+
+\f0\b\fs24 \cf0 BASE GAME - STORY MODE
+\b0 \
+\
+Interactive Items:\
+- Star display\
+- Pause Button\
+- Gameboard\
+- Town Window\
+- Character Window\
+\
+HUD\
+LEVEL DISPLAY\
+- counter underneath the word LEVEL that displays the current level. Game starts at level 1 and goes on indefinitely.\'a0 Once level is complete and score screen comes up change the level number up one.\'a0\
+\
+RESOURCE METERS\
+- These meters display the progress needed per block type in order to complete the current level. As you break blocks of a certain type the corresponding meter will fill up giving the player an overall sense of their progress. Later levels require a lot more resources to level up.\
+\
+Use the first meter fill while the bar is filling up. There are 50 frames of fill-up states that should be distributed among\'a0 the number of blocks needed to fulfill that level requirement. When full play and loop the second meter art file until the level is complete.\'a0\
+\
+STAR DISPLAY\
+- keeps track of how many stars you have in your wallet. Typically will display 0 or 1 unless you stockpile them and don't spend them immediately as you get them in the town shop. This display can be touched to open up the TOWN SHOP screen. When the player has stars to spend play and loop the StarHUDAnim. This will bring attention to the star and hopefully entice the player to touch it and open up the shop.\
+\
+PAUSE BUTTON\
+-Will pause the game and open up the PAUSE MENU where a number of other sub menus can be accessed. The player will also be able to quit to main menu or learn how to play from the pause menu.\
+\
+GAMEBOARD\
+- Where the core match 3 experience will be played. Pieces are sized at 44X44. When player touches a piece highlight it with SELECTOR1.\'a0 When firing a building power, pressing and holding finger down on that building should switch the selector art to\'a0 SELECTOR2 and highlight the pieces to be affected. Releasing finger will trigger the power to go off. At that moment, before the affected pieces break play SELECTOR 3 which will help make the powers look more kapow. If you press and hold over a building and slide your finger away and then release, it will cancel out the command. This is handy if you ready a power unintentionally.\'a0\
+\
+OPTION B:\'a0\
+-We offer the player the ability\'a0 to tap and hold on a power icon and then drag to the gameboard and release to fire off the ability.\'a0\
+\
+-When breaking blocks use the shatter anims as your particles that spray around. If they are too big then I will fix them later.\
+\
+TOWN WINDOW\
+- Initially empty, the town window will begin populating as you purchase buildings from the TOWN STORE. The first time a building is purchased and the player exits the SHOP play DUST animation at the base of the newly placed buildings. If done well it will look like the building materialized somehow.\'a0\
+\
+Buildings will grant you the power to break\'a0 extra amounts of single block types. If you have purchased a building and it is ready to fire off play and loop the building anims until they have been used then go back to frozen on frame1. When flashing, the player knows that building is ready to fire off. in order to fire off a building power simply touch the building icon in the TOWN WINDOW when the power is charged and ready.\
+\
+How is the length of time between power usage calculated?\
+-I do not know at this point and may be a safe question to ask Aaron.\'a0\
+\
+CHARACTER WINDOW\
+-Displays a portrait of your active character bonus (selected from side menu) and little icons displaying their stat boosts. Player can touch the Character Window to open up the CHARACTER SELECTION SCREEN where 12 bumbles will be waiting patiently to assist you.\'a0\
+\
+YOU GOT TROPHY\
+- This is a small message window that says YOU GOT A TROPHY that should slide in from the side stay on for 5 seconds then before sliding back out or simply fading out.\
+\
+\
+
+\b SCORE SCREEN - STORY MODE
+\b0 \
+\
+-When all of the level requirements have been met, disable input and play board animation (TO BE DETERMINED) along with celebratory sound cue.\'a0\
+\
+-Then fade in the SCOREBASE with dynamic results displayed on top. Use ScoreFont 1 on the larger fields towards bottom and ScoreFont2 on the smaller fields.\'a0\
+\
+You will need to keep track of the following statistics:\'a0\
+-# of blocks broken for every type of block for that level (and also keep a running tally for trophy purposes)\
+-Largest chain combo\
+-# of times building powers were fired off\
+-duration of the level in minutes and seconds\
+\
+-stats can stagger in if it looks good otherwise just populate the screen all at once.\
+\
+-When player is ready to move on they will hit the OK button and the game resumes where it left off on the next level.\'a0\
+\
+-general rule of thumb: lets fade assets in when possible to make for a better presentation. This includes fading to black then into Story Mode screen, fading the score screen on top of base game, fading the pause screen, etc.\
+\
+\pard\pardeftab720\ql\qnatural
+
+\f1\fs26 \cf0 - requirements for medals are TBD as well. Right now you get them for outstanding performance in levels. Be it from getting a huge number over the minimum requirement of a certain block to beating the level in less time than expected. We just need to iron out the balance and formula.\'a0\
+\
+-Medals will need to be tracked since they will show up as a cumulative display in the scrapbook trophy page.\'a0\
+\
+YOU GOT A STAR\
+\pard\pardeftab720\ql\qnatural
+
+\f0\fs24 \cf0 - This is a small message window that says YOU GOT A STAR that should slide in from the side and stay on the score screen until the player presses OK. Augment the star meter on the HUD by 1 as well.\
+\
+\
+\
+
+\b TOWN SHOP - STORY MODE
+\b0 \
+\
+\pard\pardeftab720\ql\qnatural
+
+\f1\fs26 \cf0 -ButtonPlus = the button you push to spend stars on a building or character if stars are available\
+\
+-Font_ShopStar = the font to display in the star hud in top right corner of screen\
+\
+-Header_Buildings/Characters = display these in the shop window at the top of both categories of items. Buildings first, then chars.\
+\
+-Mask1/2= use to hide any potential overlapping assets between menu and items when scrolling with your finger (if applicable. May need tweaks)\
+\
+-PlusDimmer = cover plus button and make button inactive when there are no stars in your wallet\
+\
+-Scroll Cursor = display over line on right side of shop window to show your position in the list. Player touches this asset and slides it up and down to move menu.\
+\
+-ShopItem01-18 = the items to buy in order, displayed in shop window. Will scroll when player touches the scroll icon and moves it\
+\
+-ShopStarMeter = shows current progress of your stars applied to that item\
+\
+-StarMeterIndicator= overlay on the next star in StarMeter that will be leveled up. Just something to indicate your next purchase potential. Also, it will help relieve confusion as to what the info window will mean. For instance if I am upgrading the town hall to two stars the info panel will display the details for level 2, even though I have not purchased yet. Like a preview of what you will get if you spend your star. Like the Montezuma game. Another note, when you are not scrolling you can tap anywhere in the item's box (except plus button) and the info panel should display that item's current info. Info will stay on screen until another item is tapped OR the player scrolls up or down. This will flush the info panel and it will display nothing until another item is clicked.\'a0\
+\
+\
+\pard\pardeftab720\ql\qnatural
+
+\b \cf0 SCRAPBOOK 
+\b0 \
+\
+-Buttons: use reference for placement guides. The buttons will navigate you around and if you need further explanation for each let me know\
+\
+-Category Rim
+\b :
+\b0  should display around whatever section of the \cb2 scrapbook\cb1  you are in. If you are viewing records it should be around records button for instance.\
+\
+-LockedTaleImage: should display in center of \cb2 scrapbook\cb1  page for all character stories that have not been unlocked yet. We will allow you to scroll through all pages, and the headers will change, telling you whos page you are looking at. But we have to display this message so they know that they need to buy chars to get stories.\
+\
+-CharacterTales: cropped to fit in the \cb2 scrapbook\cb1  paper area. The dimensions and placement is consistent for all files so wherever you place one should be good for all. Display these images as the player upgrades the corresponding character. 1 star opens up tale 1. 3 stars opens up tale 2 and 5 stars opens up tale3.}
