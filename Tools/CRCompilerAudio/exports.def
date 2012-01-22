@@ -1,0 +1,4 @@
+LIBRARY	"CRCompilerAudio"
+EXPORTS
+	GetHandlers
+	SetCompiler

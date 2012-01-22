@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CRCompilerAudio", "CRCompilerAudio.vcxproj", "{45BD8B9C-D120-4A6E-815F-70E1E94AE9C3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CRCompilerLib", "..\CRCompilerLibrary\CRCompilerLib.vcxproj", "{14F7D01C-9DBD-48CB-A080-E142FF28CA95}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CRUtility", "..\..\Engines\Utility\Utility.vcxproj", "{8115E85F-CF57-4E07-9CA6-D05072440864}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|Windows Mobile 6 Professional SDK (ARMV4I) = Debug|Windows Mobile 6 Professional SDK (ARMV4I)
+		Debug|Windows Mobile 6 Standard SDK (ARMV4I) = Debug|Windows Mobile 6 Standard SDK (ARMV4I)
+		Release|Win32 = Release|Win32
+		Release|Windows Mobile 6 Professional SDK (ARMV4I) = Release|Windows Mobile 6 Professional SDK (ARMV4I)
+		Release|Windows Mobile 6 Standard SDK (ARMV4I) = Release|Windows Mobile 6 Standard SDK (ARMV4I)
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45BD8B9C-D120-4A6E-815F-70E1E94AE9C3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{45BD8B9C-D120-4A6E-815F-70E1E94AE9C3}.Debug|Win32.Build.0 = Debug|Win32
+		{45BD8B9C-D120-4A6E-815F-70E1E94AE9C3}.Debug|Windows Mobile 6 Professional SDK (ARMV4I).ActiveCfg = Debug|Win32
+		{45BD8B9C-D120-4A6E-815F-70E1E94AE9C3}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Debug|Win32
+		{45BD8B9C-D120-4A6E-815F-70E1E94AE9C3}.Release|Win32.ActiveCfg = Release|Win32
+		{45BD8B9C-D120-4A6E-815F-70E1E94AE9C3}.Release|Win32.Build.0 = Release|Win32
+		{45BD8B9C-D120-4A6E-815F-70E1E94AE9C3}.Release|Windows Mobile 6 Professional SDK (ARMV4I).ActiveCfg = Release|Win32
+		{45BD8B9C-D120-4A6E-815F-70E1E94AE9C3}.Release|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Release|Win32
+		{14F7D01C-9DBD-48CB-A080-E142FF28CA95}.Debug|Win32.ActiveCfg = Debug|Win32
+		{14F7D01C-9DBD-48CB-A080-E142FF28CA95}.Debug|Win32.Build.0 = Debug|Win32
+		{14F7D01C-9DBD-48CB-A080-E142FF28CA95}.Debug|Windows Mobile 6 Professional SDK (ARMV4I).ActiveCfg = Debug|Win32
+		{14F7D01C-9DBD-48CB-A080-E142FF28CA95}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Debug|Win32
+		{14F7D01C-9DBD-48CB-A080-E142FF28CA95}.Release|Win32.ActiveCfg = Release|Win32
+		{14F7D01C-9DBD-48CB-A080-E142FF28CA95}.Release|Win32.Build.0 = Release|Win32
+		{14F7D01C-9DBD-48CB-A080-E142FF28CA95}.Release|Windows Mobile 6 Professional SDK (ARMV4I).ActiveCfg = Release|Win32
+		{14F7D01C-9DBD-48CB-A080-E142FF28CA95}.Release|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Release|Win32
+		{8115E85F-CF57-4E07-9CA6-D05072440864}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8115E85F-CF57-4E07-9CA6-D05072440864}.Debug|Win32.Build.0 = Debug|Win32
+		{8115E85F-CF57-4E07-9CA6-D05072440864}.Debug|Windows Mobile 6 Professional SDK (ARMV4I).ActiveCfg = Debug|Win32
+		{8115E85F-CF57-4E07-9CA6-D05072440864}.Debug|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Debug|Win32
+		{8115E85F-CF57-4E07-9CA6-D05072440864}.Release|Win32.ActiveCfg = Release|Win32
+		{8115E85F-CF57-4E07-9CA6-D05072440864}.Release|Win32.Build.0 = Release|Win32
+		{8115E85F-CF57-4E07-9CA6-D05072440864}.Release|Windows Mobile 6 Professional SDK (ARMV4I).ActiveCfg = Release|Win32
+		{8115E85F-CF57-4E07-9CA6-D05072440864}.Release|Windows Mobile 6 Standard SDK (ARMV4I).ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

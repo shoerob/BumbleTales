@@ -1,0 +1,35 @@
+C:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\bin\Release\iPhone Tools.exe.config
+C:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\bin\Release\Settings.xml
+C:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\bin\Release\zlib1.dll
+C:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\bin\Release\iPhone Tools.exe
+C:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\bin\Release\iPhone Tools.pdb
+C:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\bin\Release\HGFGenerator.dll
+C:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\bin\Release\HGFGenerator.pdb
+C:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\obj\Release\ResolveAssemblyReference.cache
+C:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\obj\Release\iPhone_Tools.frmMain.resources
+C:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\obj\Release\iPhone_Tools.HGFPanel.resources
+C:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\obj\Release\iPhone_Tools.LevelPanel.resources
+C:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\obj\Release\iPhone_Tools.Properties.Resources.resources
+C:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\obj\Release\iPhone_Tools.QuickToolsPanel.resources
+C:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\obj\Release\iPhone Tools.csproj.GenerateResource.Cache
+C:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\obj\Release\iPhone Tools.exe
+C:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\obj\Release\iPhone Tools.pdb
+E:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\bin\Release\iPhone Tools.exe.config
+E:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\obj\Release\iPhone Tools.exe
+E:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\obj\Release\iPhone Tools.pdb
+E:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\obj\Release\ResolveAssemblyReference.cache
+E:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\obj\Release\iPhone_Tools.frmMain.resources
+E:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\obj\Release\iPhone_Tools.HGFPanel.resources
+E:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\obj\Release\iPhone_Tools.LevelPanel.resources
+E:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\obj\Release\iPhone_Tools.Properties.Resources.resources
+E:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\obj\Release\iPhone_Tools.QuickToolsPanel.resources
+E:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\obj\Release\ResGen.read.1.tlog
+E:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\obj\Release\ResGen.write.1.tlog
+E:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\bin\Release\Settings.xml
+E:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\bin\Release\zlib1.dll
+E:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\bin\Release\iPhone Tools.exe
+E:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\bin\Release\iPhone Tools.pdb
+E:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\bin\Release\HGFGenerator.dll
+E:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\bin\Release\HGFGenerator.pdb
+E:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\obj\Release\GenerateResource.read.1.tlog
+E:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\obj\Release\GenerateResource.write.1.tlog

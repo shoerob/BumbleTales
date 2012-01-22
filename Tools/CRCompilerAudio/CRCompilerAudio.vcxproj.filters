@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Compilers">
+      <UniqueIdentifier>{7f7abd88-e279-4417-af18-cf7595b3994e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Handlers">
+      <UniqueIdentifier>{946e5264-d75c-4070-a5f3-3679b859cb7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Compilers">
+      <UniqueIdentifier>{c7deb08f-4a45-4eb5-b93a-e0abfdb7249c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Handlers">
+      <UniqueIdentifier>{39ff5551-2e26-4d88-a62b-422e54883616}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CRCompilerAudio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BufferCompiler.cpp">
+      <Filter>Source Files\Compilers</Filter>
+    </ClCompile>
+    <ClCompile Include="BuffersCompiler.cpp">
+      <Filter>Source Files\Compilers</Filter>
+    </ClCompile>
+    <ClCompile Include="MusicCompiler.cpp">
+      <Filter>Source Files\Compilers</Filter>
+    </ClCompile>
+    <ClCompile Include="SongCompiler.cpp">
+      <Filter>Source Files\Compilers</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundCompiler.cpp">
+      <Filter>Source Files\Compilers</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundsCompiler.cpp">
+      <Filter>Source Files\Compilers</Filter>
+    </ClCompile>
+    <ClCompile Include="BufferHandler.cpp">
+      <Filter>Source Files\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="BuffersHandler.cpp">
+      <Filter>Source Files\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="MusicHandler.cpp">
+      <Filter>Source Files\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="SongHandler.cpp">
+      <Filter>Source Files\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundHandler.cpp">
+      <Filter>Source Files\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundsHandler.cpp">
+      <Filter>Source Files\Handlers</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="exports.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CRCompilerAudio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BufferCompiler.h">
+      <Filter>Header Files\Compilers</Filter>
+    </ClInclude>
+    <ClInclude Include="BuffersCompiler.h">
+      <Filter>Header Files\Compilers</Filter>
+    </ClInclude>
+    <ClInclude Include="MusicCompiler.h">
+      <Filter>Header Files\Compilers</Filter>
+    </ClInclude>
+    <ClInclude Include="SongCompiler.h">
+      <Filter>Header Files\Compilers</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundCompiler.h">
+      <Filter>Header Files\Compilers</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundsCompiler.h">
+      <Filter>Header Files\Compilers</Filter>
+    </ClInclude>
+    <ClInclude Include="BufferHandler.h">
+      <Filter>Header Files\Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="BuffersHandler.h">
+      <Filter>Header Files\Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="MusicHandler.h">
+      <Filter>Header Files\Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="SongHandler.h">
+      <Filter>Header Files\Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundHandler.h">
+      <Filter>Header Files\Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundsHandler.h">
+      <Filter>Header Files\Handlers</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
