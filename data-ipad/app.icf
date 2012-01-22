@@ -1,0 +1,40 @@
+# This file is for configuration settings for your
+# application.
+#
+# The syntax is similar to windows .ini files ie
+#
+# [GroupName]
+# Setting = Value
+#
+# Which can be read by your application using
+#  e.g s3eConfigGetString("GroupName", "Setting", string)
+#
+# All settings must be documented in .config.txt files.
+# New settings specific to this application should be
+# documented in app.config.txt
+#
+# Some conditional operations are also permitted, see the
+# S3E documentation for details.
+
+[S3E] 
+SplashscreenBkR=0 
+SplashscreenBkG=0 
+SplashscreenBkB=0 
+  
+MemSize = 22000000 
+MemSize7 = 60000 
+DispFixRot=1
+SymbianOverideDeviceRot=0
+SoundStereo = 0
+SoundOutputFreq = 16000
+AudioAllowBackground = 1
+WinWidth=320
+WinHeight=480
+SysGlesVersion=1
+WinFullScreen=0
+WindowAllowAltEnter=1
+WindowBpp=32
+IOSDispScaleFactor=200
+
+#[crconfig]
+#platform=ipad
