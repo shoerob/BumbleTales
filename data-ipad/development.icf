@@ -87,7 +87,7 @@ SurfacePredefinedResolution    = Type=string, Allowed="176x200" "176x208" "240x3
 SurfaceRotation                = Type=string, Allowed="Rot0" "Rot90" "Rot180" "Rot270", Default="Rot0", Value = "Rot0"
 SurfaceUnalign                 = Type=bool, Default="true", Value = "true"
 SurfaceUseMultiBuffers         = Type=bool, Default="true", Value = "true"
-SurfaceWidth                   = Type=int, Min=128.000000, Max=4096.000000, Default="320", Value = "600"
+SurfaceWidth                   = Type=int, Min=128.000000, Max=4096.000000, Default="320", Value = "640"
 SymbianSoundLatency            = Type=int, Min=20.000000, Max=1400.000000, Default="120", Value = "120"
 ThreadEnabled                  = Type=bool, Default="true", Value = "true"
 TimerAccuracy                  = Type=int, Min=0.000000, Max=1000.000000, Default="0", Value = "0"

@@ -89,7 +89,7 @@ private:
 	SplashScreen *itemLockedSplash;
 	bool showingNewEntrySplash;
 	
-	int yDownPos;
+	float yDownPos;
 	bool nubTouchMode;
 	
 	bool autoScroll;

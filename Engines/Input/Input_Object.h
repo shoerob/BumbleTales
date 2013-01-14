@@ -24,8 +24,8 @@ struct Touch
 {
 	Touch() : X(0),Y(0),Active(false),ID(-1) {}
 	Touch(int _id) : X(0),Y(0),Active(false),ID(_id) {}
-    int X; // position x
-    int Y; // position y
+    float X; // position x
+    float Y; // position y
     bool Active; // is touch active (currently down)
     int ID; // touch's unique identifier
 };

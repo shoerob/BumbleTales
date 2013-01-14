@@ -375,7 +375,7 @@ void ShopListing::TouchesMovedImpl(Touch &_touches)
 	{
 		m_touchID = _touches.ID;
 			
-		int yDiff = _touches.Y - yDownPos;
+		float yDiff = _touches.Y - yDownPos;
 		yDownPos = _touches.Y;
 		autoScrollStep = yDiff;
 			

@@ -327,6 +327,10 @@ deployments
 	bada-icon='bada/btalesIcon96.png'
 	bada-manifest='bada/20120120_manifest.xml'
 	["bada2"]
+	bada-appid='8k36t53jbx'
+	bada-appsecret='4C340D26B817C1B579851E36E4EFB789'
+	bada-icon='bada/btalesIcon96.png'
+	bada-manifest='bada/20120120_manifest.xml'
 	bada-signed=1
 	["iad"]
 	["ipad"]

@@ -21,7 +21,7 @@ SplashscreenBkR=0
 SplashscreenBkG=0 
 SplashscreenBkB=0 
   
-MemSize = 22000000 
+MemSize = 12000000 
 MemSize7 = 60000 
 DispFixRot=1
 SymbianOverideDeviceRot=0
