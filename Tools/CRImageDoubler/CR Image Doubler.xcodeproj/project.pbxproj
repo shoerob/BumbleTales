@@ -1,0 +1,232 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		422D0B2A1690A27D00B10B9D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 422D0B291690A27D00B10B9D /* main.cpp */; };
+		422D0B2C1690A27D00B10B9D /* CR_Image_Doubler.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 422D0B2B1690A27D00B10B9D /* CR_Image_Doubler.1 */; };
+		426D78B716934749007442FA /* libfreeimage.3.15.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 426D78B616934749007442FA /* libfreeimage.3.15.3.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		422D0B231690A27D00B10B9D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				422D0B2C1690A27D00B10B9D /* CR_Image_Doubler.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		422D0B251690A27D00B10B9D /* CR Image Doubler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "CR Image Doubler"; sourceTree = BUILT_PRODUCTS_DIR; };
+		422D0B291690A27D00B10B9D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		422D0B2B1690A27D00B10B9D /* CR_Image_Doubler.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = CR_Image_Doubler.1; sourceTree = "<group>"; };
+		426D78B616934749007442FA /* libfreeimage.3.15.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfreeimage.3.15.3.dylib; path = ../../../../../opt/local/lib/libfreeimage.3.15.3.dylib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		422D0B221690A27D00B10B9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				426D78B716934749007442FA /* libfreeimage.3.15.3.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		422D0B1A1690A27C00B10B9D = {
+			isa = PBXGroup;
+			children = (
+				426D78B616934749007442FA /* libfreeimage.3.15.3.dylib */,
+				422D0B281690A27D00B10B9D /* CR Image Doubler */,
+				422D0B261690A27D00B10B9D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		422D0B261690A27D00B10B9D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				422D0B251690A27D00B10B9D /* CR Image Doubler */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		422D0B281690A27D00B10B9D /* CR Image Doubler */ = {
+			isa = PBXGroup;
+			children = (
+				422D0B291690A27D00B10B9D /* main.cpp */,
+				422D0B2B1690A27D00B10B9D /* CR_Image_Doubler.1 */,
+			);
+			path = "CR Image Doubler";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		422D0B241690A27D00B10B9D /* CR Image Doubler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 422D0B2F1690A27D00B10B9D /* Build configuration list for PBXNativeTarget "CR Image Doubler" */;
+			buildPhases = (
+				422D0B211690A27D00B10B9D /* Sources */,
+				422D0B221690A27D00B10B9D /* Frameworks */,
+				422D0B231690A27D00B10B9D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CR Image Doubler";
+			productName = "CR Image Doubler";
+			productReference = 422D0B251690A27D00B10B9D /* CR Image Doubler */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		422D0B1C1690A27C00B10B9D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Eric Duhon";
+			};
+			buildConfigurationList = 422D0B1F1690A27C00B10B9D /* Build configuration list for PBXProject "CR Image Doubler" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 422D0B1A1690A27C00B10B9D;
+			productRefGroup = 422D0B261690A27D00B10B9D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				422D0B241690A27D00B10B9D /* CR Image Doubler */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		422D0B211690A27D00B10B9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				422D0B2A1690A27D00B10B9D /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		422D0B2D1690A27D00B10B9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		422D0B2E1690A27D00B10B9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		422D0B301690A27D00B10B9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = NO;
+				HEADER_SEARCH_PATHS = /opt/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		422D0B311690A27D00B10B9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = NO;
+				HEADER_SEARCH_PATHS = /opt/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		422D0B1F1690A27C00B10B9D /* Build configuration list for PBXProject "CR Image Doubler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				422D0B2D1690A27D00B10B9D /* Debug */,
+				422D0B2E1690A27D00B10B9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		422D0B2F1690A27D00B10B9D /* Build configuration list for PBXNativeTarget "CR Image Doubler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				422D0B301690A27D00B10B9D /* Debug */,
+				422D0B311690A27D00B10B9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 422D0B1C1690A27C00B10B9D /* Project object */;
+}
