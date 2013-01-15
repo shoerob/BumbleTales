@@ -3,6 +3,7 @@
 
 defines
 {
+	IW_HTTP_SSL
 }
 
 includepaths 
@@ -22,7 +23,8 @@ includepaths
 subprojects
 {
 	iwutil
-
+	iwhttp
+	
 	engines/math/crmath
 	engines/utility/crutility
 	engines/input/crinput
@@ -32,6 +34,7 @@ subprojects
 
 	thirdparty/lzo
 	thirdparty/tremor
+	thirdparty/coresocial
 }
 
 files

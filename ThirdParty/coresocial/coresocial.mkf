@@ -1,0 +1,21 @@
+# mkf file for module coresocial
+display_name "Scoreloop/Core Social"
+subproject coresocial
+
+library
+{
+    ".,coresocial"
+}
+
+includepath h
+
+files
+{
+    (h)
+    "scoreloop/*.h"
+}
+
+subprojects
+{
+    iwhttp
+}
