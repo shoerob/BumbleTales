@@ -28,12 +28,12 @@ SymbianOverideDeviceRot=0
 SoundStereo = 0
 SoundOutputFreq = 16000
 AudioAllowBackground = 1
-WinWidth=320
-WinHeight=480
+WinWidth=768
+WinHeight=1024
 SysGlesVersion=1
 WinFullScreen=0
-WindowAllowAltEnter=1
-WindowBpp=32
+WinAllowAltEnter=1
+WinBpp=32
 IOSDispScaleFactor=200
 
 #[crconfig]
