@@ -1,0 +1,3 @@
+[crconfig]
+platform     Platform - should be a string
+use_scoreloop	Should score loop be used instead of local file - true or false
