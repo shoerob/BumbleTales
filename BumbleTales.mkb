@@ -39,6 +39,7 @@ subprojects
 
 files
 {
+	config.txt
 	(BumbleTales)
 	[Game, AssetLists]
 	AssetList.h

@@ -15,6 +15,7 @@
 #include <string>
 #include "Sound.h"
 #include "NewAssetList.h"
+#include "AppConfig.h"
 
 using namespace std;
 using namespace CR::Utility;
@@ -35,6 +36,10 @@ Game::Game()
 Game::~Game()
 {
 	m_database->Release();
+	if(AppConfig::Instance().UseScoreloop())
+	{
+		SC_Client_Release(m_ScoreloopClient);
+	}
 }
 
 void Game::Initialize()
@@ -74,6 +79,18 @@ void Game::Initialize()
 	// set up the game states
 	gameStateMachine << new MainMenuGameState() << new StoryModeGameState() << new ArcadeModeGameState();
 	gameStateMachine.State = MAIN_MENU_STATE;
+
+	//scoreloop
+	if(AppConfig::Instance().UseScoreloop())
+	{
+		SC_InitData_Init(&m_ScoreloopInit);
+		const char* scoreGameID = "c42dcddd-2b24-497c-8da5-5c5513b4fc4";
+		const char* scoreGameSecret = "ax2+Lwci2+vBULlaBf0FJ3YDvLZqLUa3nTDwN1CRmEn8zMurC/gAMg==";
+		const char* scoreGameCurrency = "JHL";
+
+		SC_Error_t errCode = SC_Client_New(&m_ScoreloopClient, &m_ScoreloopInit, scoreGameID, 
+			scoreGameSecret, "1.3", scoreGameCurrency, "en");
+	}
 }
 
 void Game::Execute()

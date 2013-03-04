@@ -23,6 +23,7 @@
 #include <iostream>
 #include "SaveGameManager.h"
 #include "Databasefwd.h"
+#include <scoreloop/scoreloopcore.h>
 
 using namespace std;
 
@@ -43,4 +44,6 @@ class Game
 	private:
 		CR::Utility::FSM gameStateMachine;
 		CR::Database::IDatabase *m_database;
+		SC_InitData_t m_ScoreloopInit;
+		SC_Client_h m_ScoreloopClient;
 	};
