@@ -322,8 +322,13 @@ deployments
 deployments
 {
 	["Default"]
+	blackberry-author='Conjured Realms'
+	blackberry-authorid='gYAAgKW5-kLMVZwHELcgG8P1Gqw'
+	blackberry-cskpass='b0dptfi4'
+	blackberry-keystore='E:/source/BumbleTales/Blackberry/author.p12'
+	blackberry-storepass='b0dptfi4'
 	playbook-author='Conjured Realms'
-	playbook-authorid='gYAAgITt1FSnw2wMWuponiyOTVU'
+	playbook-authorid='gYAAgKW5-kLMVZwHELcgG8P1Gqw'
 	["android"]
 	["bada"]
 	bada-appid='8k36t53jbx'
@@ -343,7 +348,7 @@ deployments
 	["phone"]
 	["playbook"]
 	playbook-author='Conjured Realms'
-	playbook-authorid='gYAAgITt1FSnw2wMWuponiyOTVU'
+	playbook-authorid='gYAAgKW5-kLMVZwHELcgG8P1Gqw'
 	playbook-icon='Assets/Icons/Icon86.png'
 	splashscreen-auto-onblack=1
 }

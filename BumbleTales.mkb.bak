@@ -3,6 +3,7 @@
 
 defines
 {
+	IW_HTTP_SSL
 }
 
 includepaths 
@@ -22,7 +23,8 @@ includepaths
 subprojects
 {
 	iwutil
-
+	iwhttp
+	
 	engines/math/crmath
 	engines/utility/crutility
 	engines/input/crinput
@@ -32,10 +34,12 @@ subprojects
 
 	thirdparty/lzo
 	thirdparty/tremor
+	thirdparty/coresocial
 }
 
 files
 {
+	config.txt
 	(BumbleTales)
 	[Game, AssetLists]
 	AssetList.h
@@ -319,7 +323,7 @@ deployments
 {
 	["Default"]
 	playbook-author='Conjured Realms'
-	playbook-authorid='gYAAgITt1FSnw2wMWuponiyOTVU'
+	playbook-authorid='gYAAgKW5-kLMVZwHELcgG8P1Gqw'
 	["android"]
 	["bada"]
 	bada-appid='8k36t53jbx'
@@ -327,6 +331,10 @@ deployments
 	bada-icon='bada/btalesIcon96.png'
 	bada-manifest='bada/20120120_manifest.xml'
 	["bada2"]
+	bada-appid='8k36t53jbx'
+	bada-appsecret='4C340D26B817C1B579851E36E4EFB789'
+	bada-icon='bada/btalesIcon96.png'
+	bada-manifest='bada/20120120_manifest.xml'
 	bada-signed=1
 	["iad"]
 	["ipad"]
@@ -335,7 +343,7 @@ deployments
 	["phone"]
 	["playbook"]
 	playbook-author='Conjured Realms'
-	playbook-authorid='gYAAgITt1FSnw2wMWuponiyOTVU'
+	playbook-authorid='gYAAgKW5-kLMVZwHELcgG8P1Gqw'
 	playbook-icon='Assets/Icons/Icon86.png'
 	splashscreen-auto-onblack=1
 }

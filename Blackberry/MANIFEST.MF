@@ -1,0 +1,17 @@
+Archive-Manifest-Version: 1.2
+Archive-Created-By: BlackBerry BAR Packager v1.4
+
+Package-Author: Conjured Realms
+Package-Name: debug.token
+Package-Version: 0.0.0.2
+Package-Type: debug-token
+Package-Author-Certificate-Hash: LoKQYhD5mgVptB_QD03l1BDZHu_1aX482WvPeMMwPRjbyKlZMG3RBmB2M27wEvjb-_EpFOLlgBKbNP7T-0Pncg
+Package-Author-Id: gYAAgKW5-kLMVZwHELcgG8P1Gqw
+Package-Id: gYABgMTqI3vSgdZxb10UplY03u0
+Package-Version-Id: gYACgMVcKYDB78ifnzTZQXjBIiY
+Package-Issue-Date: 2013-03-05T18:52:25Z
+
+Debug-Token-System-Actions: execute,multi_window,multi_instance,run_air_native,run_native,_sys_use_consumer_push
+Debug-Token-Expiry-Date: 2013-04-04T18:52:26Z
+Debug-Token-Device-Id: 632425239
+
