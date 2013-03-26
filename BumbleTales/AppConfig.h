@@ -18,6 +18,7 @@ public:
 	bool IsIAd() const {return m_platformType == IAD;}
 	bool IsAndroid() const {return m_platformType == ANDROID;}
 	bool UseScoreloop() const { return m_UseScoreLoop; }
+	void DisableScoreloop() { m_UseScoreLoop = false; }
 
 private:
 	AppConfigSingleton();

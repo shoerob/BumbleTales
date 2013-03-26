@@ -21,9 +21,9 @@ SplashscreenBkR=0
 SplashscreenBkG=0 
 SplashscreenBkB=0 
   
-MemSize = 12000000 
+MemSize = 15000000 
 MemSize7 = 60000 
-DispFixRot=1
+DispFixRot=Portrait
 SymbianOverideDeviceRot=0
 SoundStereo = 0
 SoundOutputFreq = 16000

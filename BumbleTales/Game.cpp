@@ -7,6 +7,7 @@
  *
  */
 
+#include "s3e.h" 
 #include "Game.h"
 #include "Graphics.h"
 #include "Globals.h"
@@ -29,8 +30,68 @@ Input_Engine *input_engine = 0;
 //CRSoundPlayer *soundPlayer = 0;
 //CRMusicPlayer *musicPlayer = 0;
 
-Game::Game()
+namespace
 {
+	void ScoreloopControllercallback(void* _gameClass, SC_Error_t _completionStatus) 
+	{
+		Game* game = reinterpret_cast<Game*>(_gameClass);
+		if(_completionStatus != SC_OK)
+		{
+			AppConfig::Instance().DisableScoreloop();
+		}
+		game->ScoreLoopReady();
+	}
+}
+
+Game::Game() : m_ScoreLoopSavePending(false), m_ScoreLoopSaveRequested(false)
+{
+	SC_Error_t errCode;
+	//scoreloop, get this started asap
+	if(AppConfig::Instance().UseScoreloop())
+	{
+		m_ScoreloopInit.clientType = 0;
+
+		SC_InitData_Init(&m_ScoreloopInit);
+		const char* scoreGameID = "c42dcddd-2b24-497c-8da5-5c5513b4fc49";
+		const char* scoreGameSecret = "ax2+Lwci2+vBULlaBf0FJ3YDvLZqLUa3nTDwN1CRmEn8zMurC/gAMg==";
+		const char* scoreGameCurrency = "JHL";
+
+		errCode = SC_Client_New(&m_ScoreloopClient, &m_ScoreloopInit, scoreGameID, 
+			scoreGameSecret, "1.0", scoreGameCurrency, "en");
+		if(errCode != SC_OK)
+		{
+			AppConfig::Instance().DisableScoreloop();
+		}
+	}
+	if(AppConfig::Instance().UseScoreloop())
+	{
+		m_ScoreloopSession = SC_Client_GetSession(m_ScoreloopClient);
+
+		/*errCode = SC_Context_New(&m_ScoreloopContext);
+		if(errCode != SC_OK)
+		{
+			AppConfig::Instance().DisableScoreloop();
+		}*/
+	}
+	if(AppConfig::Instance().UseScoreloop())
+	{
+		SC_SessionState_tag sessionState = SC_Session_GetState(m_ScoreloopSession);
+		m_ScoreLoopReady = false;
+		errCode = SC_Client_CreateUserController(m_ScoreloopClient, &m_ScoreloopUserController, ScoreloopControllercallback, this);
+		
+		if(errCode != SC_OK)
+		{
+			AppConfig::Instance().DisableScoreloop();
+		}
+	}
+	if(AppConfig::Instance().UseScoreloop())
+	{
+		errCode = SC_UserController_LoadUserContext(m_ScoreloopUserController);
+		if(errCode != SC_OK)
+		{
+			AppConfig::Instance().DisableScoreloop();
+		}
+	}
 }
 
 Game::~Game()
@@ -80,21 +141,60 @@ void Game::Initialize()
 	gameStateMachine << new MainMenuGameState() << new StoryModeGameState() << new ArcadeModeGameState();
 	gameStateMachine.State = MAIN_MENU_STATE;
 
-	//scoreloop
+	m_ScoreLoopSetup = false;
+	/*if(AppConfig::Instance().UseScoreloop())
+	{
+		SC_SessionState_tag sessionState = SC_Session_GetState(m_ScoreloopSession);
+		while(!m_ScoreLoopReady)
+		{
+			s3eDeviceYield(100); 
+		}
+	}
 	if(AppConfig::Instance().UseScoreloop())
 	{
-		SC_InitData_Init(&m_ScoreloopInit);
-		const char* scoreGameID = "c42dcddd-2b24-497c-8da5-5c5513b4fc4";
-		const char* scoreGameSecret = "ax2+Lwci2+vBULlaBf0FJ3YDvLZqLUa3nTDwN1CRmEn8zMurC/gAMg==";
-		const char* scoreGameCurrency = "JHL";
+		m_ScoreloopUser = SC_Session_GetUser(m_ScoreloopSession);
+		m_ScoreloopContext = SC_User_GetContext(m_ScoreloopUser);
+	}*/
+}
 
-		SC_Error_t errCode = SC_Client_New(&m_ScoreloopClient, &m_ScoreloopInit, scoreGameID, 
-			scoreGameSecret, "1.3", scoreGameCurrency, "en");
+void Game::WaitForScoreloop()
+{
+	if(AppConfig::Instance().UseScoreloop())
+	{
+		if(!m_ScoreLoopSetup)
+		{
+			SC_SessionState_tag sessionState = SC_Session_GetState(m_ScoreloopSession);
+			while(!m_ScoreLoopReady)
+			{
+				s3eDeviceYield(100); 
+			}
+			
+			if(AppConfig::Instance().UseScoreloop())
+			{
+				m_ScoreloopUser = SC_Session_GetUser(m_ScoreloopSession);
+				m_ScoreloopContext = SC_User_GetContext(m_ScoreloopUser);
+			}
+		}
 	}
+}
+
+void Game::SaveScoreLoop()
+{
+	m_ScoreLoopSaveRequested = true;
 }
 
 void Game::Execute()
 {	
+	if(AppConfig::Instance().UseScoreloop())
+	{
+		if(m_ScoreLoopSaveRequested && !m_ScoreLoopSavePending)
+		{
+			SC_UserController_UpdateUserContext(m_ScoreloopUserController);
+			m_ScoreLoopSavePending = true;
+			m_ScoreLoopSaveRequested = false;
+		}
+	}
+
 	gameStateMachine();
 	Globals::Instance().Update();
 	ISound::Instance().Tick();
