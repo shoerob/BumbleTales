@@ -17,19 +17,19 @@ CrystalParticleSystem::CrystalParticleSystem(CR::Math::PointF position, Resource
 	
 	
 	// left particles
-	for (int i = 0; i < 4; i++)
+	for (int i = 0; i < 16; i++)
 	{
-		float xMod = FloatRand(15.0f);
-		float yMod = FloatRand(ResourceTile::tile_height);
+		float xMod = FloatRand(30.0f);
+		float yMod = FloatRand(2.0f*ResourceTile::tile_height);
 		CR::Math::PointF pnt = CR::Math::PointF(position.X() - (ResourceTile::tile_width/2) + xMod, position.Y() - (ResourceTile::tile_height/2) + yMod, 0);
 		particles.push_back(new CrystalParticle(pnt, CPStyleLeft, rType));
 	}
 	
 	//right particles
-	for (int i = 0; i < 4; i++)
+	for (int i = 0; i < 16; i++)
 	{
-		float xMod = FloatRand(15.0f);
-		float yMod = FloatRand(ResourceTile::tile_height);
+		float xMod = FloatRand(30.0f);
+		float yMod = FloatRand(2.0f*ResourceTile::tile_height);
 		CR::Math::PointF pnt = CR::Math::PointF(position.X() + (ResourceTile::tile_width/2) - xMod, position.Y() - (ResourceTile::tile_height/2) + yMod, 0);
 		particles.push_back(new CrystalParticle(pnt, CPStyleRight, rType));
 	}	

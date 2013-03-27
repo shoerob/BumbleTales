@@ -17,7 +17,7 @@ extern CR::Graphics::GraphicsEngine *graphics_engine;
 CrystalParticle::CrystalParticle(CR::Math::PointF position, CrystalParticleStyle cpStyle, ResourceType rType)
 {
 	m_sprite = graphics_engine->CreateSprite1(true,600);
-	maxTimeLeft = 1.0;
+	maxTimeLeft = 1.0 + FloatRand(1.0);
 	timeLeft = maxTimeLeft;
 	
 	switch (rType)
@@ -71,8 +71,8 @@ CrystalParticle::CrystalParticle(CR::Math::PointF position, CrystalParticleStyle
 	
 	float yVel = -4.0f;
 	//float xAcc = -0.07f;
-	float xAcc = FloatRand(0.2f) + 0.1f;
-	float yAcc = FloatRand(0.4f) + 0.6f;
+	float xAcc = FloatRand(0.4f) + 0.1f;
+	float yAcc = FloatRand(0.8f) + 0.6f;
 	
 	m_velocity = CR::Math::Vector3F(0.0f, yVel, 0.0f);
 	m_acceleration = CR::Math::Vector3F(xAcc * xMod, yAcc, 0.0f);
