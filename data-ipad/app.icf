@@ -38,4 +38,4 @@ IOSDispScaleFactor=200
 
 #[crconfig]
 #platform=ipad
-#use_scoreloop=true
+#use_scoreloop=false
