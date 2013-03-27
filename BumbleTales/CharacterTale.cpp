@@ -109,10 +109,12 @@ void CharacterTale::SetPage(int page, CR::Graphics::Sprite *pageSprite)
 	if (pageAssets[page] == CR::AssetList::Scrapbook_Locked_Tale)
 	{
 		pageSprite->SetPositionAbsolute(160, 250);
+		pageSprite->SetDesignSize(243, 104);
 	}
 	else
 	{
 		pageSprite->SetPositionAbsolute(160, 250);
+		pageSprite->SetDesignSize(302, 334);
 	}
 }
 

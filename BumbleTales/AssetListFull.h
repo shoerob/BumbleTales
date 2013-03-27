@@ -19,7 +19,7 @@ namespace CR
 		 const int Pause_Scrapbook_Button = 11;
 		 const int Pause_How_To_Play_Button = 12;
 		 const int Pause_Main_Menu_Button = 13;
-		 const int Menu_Resume_Game_Button = 14;
+		 const int Menu_Resume_Game_Button = 14; //not used
 		 const int Menu_Scrapbook_Button = 15;
 		 const int Menu_Story_Mode_Button = 16;
 		 const int Menu_Background = 17;
@@ -35,7 +35,7 @@ namespace CR
 		 const int Score_Base_1 = 27;
 		 const int Score_No_Button = 28;
 		 const int Score_Ok_Button = 29;
-		 const int Score_Upload_Score_Button = 30;
+		 const int Score_Upload_Score_Button = 30; //not used
 		 const int Score_Yes_Button = 31;
 		 const int Final_Score_Tag = 32;
 		 const int Font_Score_1 = 33;
@@ -76,7 +76,7 @@ namespace CR
 		 const int Char_HUD_Base = 68;
 		 const int Char_HUD_Character = 69;
 		 const int Story_Mode_HUD_Top = 70;
-		 const int Story_Mode_HUD_Bottom = 71;
+		 const int Story_Mode_HUD_Bottom = 71; //not used
 		 const int Char_Dim = 72;
 		 const int Building_Town_Hall = 73;
 		 const int Building_Police_Station = 74;
@@ -134,8 +134,8 @@ namespace CR
 		 const int Shop_Star_Font = 126;
 		 const int Shop_Header_Buildings = 127;
 		 const int Shop_Header_Characters = 128;
-		 const int Shop_Mask1 = 129;
-		 const int Shop_Mask2 = 130;
+		 const int Shop_Mask1 = 129; //not used
+		 const int Shop_Mask2 = 130; //not used
 		 const int Shop_New_Entry_Message = 131;
 		 const int Shop_Plus_Dimmer = 132;
 		 const int Shop_Scroll_Cursor = 133;

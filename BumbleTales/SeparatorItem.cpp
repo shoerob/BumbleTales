@@ -18,9 +18,11 @@ SeparatorItem::SeparatorItem(HeaderType headerType)
 	{
 		case CharacterHeader:
 			itemSprite->SetImage(CR::AssetList::Shop_Header_Characters);
+			itemSprite->SetDesignSize(250, 18);
 			break;
 		case BuildingHeader:
 			itemSprite->SetImage(CR::AssetList::Shop_Header_Buildings);
+			itemSprite->SetDesignSize(249, 17);
 			break;
 		default:
 			break;

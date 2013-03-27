@@ -56,6 +56,7 @@ ResourcePuzzle::ResourcePuzzle(int xLoc, int yLoc, int spacing) : m_touchID(-1)
 	
 	resetBoardSprite = graphics_engine->CreateSprite1(false, 750);
 	resetBoardSprite->SetImage(CR::AssetList::No_Moves_Cover);
+	resetBoardSprite->SetDesignSize(320, 320);
 	resetBoardSprite->SetPositionAbsolute(160, 228);
 	resettingPuzzle = false;
 

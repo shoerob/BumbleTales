@@ -140,6 +140,7 @@ void BuildingButtonControl::ShowBuildAnimation()
 	m_showBuildAnimation = true;
 	buildSprite = graphics_engine->CreateSprite1(true,700);
 	buildSprite->SetImage(CR::AssetList::Building_HUD_Dust);
+	buildSprite->SetDesignSize(66, 36);
 	buildSprite->SetAutoAnimate(true);
 	buildSprite->SetFrame(0);
 	buildSprite->SetPositionAbsolute(bounds.left + (buttonSprite->GetFrameWidth()/2), bounds.top + (buttonSprite->GetFrameHeight()/2));
@@ -191,11 +192,7 @@ void BuildingButtonControl::TouchesBeganImpl(Touch &_touches)
 void BuildingButtonControl::TouchesMovedImpl(Touch &_touches)
 {
 	if (!m_active || m_touchID != -1)
-	{
-		//std::tr1::shared_ptr<CR::Sound::ISoundFX> sound;
-		//sound = ISound::Instance().CreateSoundFX(CR::AssetList::sounds::building_notcharged_1a::ID);
-		//sound->Play();
-		
+	{		
 		return;
 	}
 	
@@ -227,100 +224,7 @@ void BuildingButtonControl::TouchesEndedImpl(Touch &_touches)
 	}
 }
 
-/*
-void BuildingButtonControl::TouchesBeganImpl(UIView *view, NSSet *touches)
+void BuildingButtonControl::SetDesignSize(int _width, int _height)
 {
-	//if (!m_active)
-	//{		
-	//	return;
-	//}
-	
-	CGPoint glLocation;
-	for (UITouch *touch in touches)
-	{
-		if (this->touch != NULL && touch != this->touch)
-			continue;
-		
-		glLocation = GetGLLocation(view, touch);
-		
-		if (glLocation.x > bounds.left && 
-			glLocation.x < bounds.right + bounds.left &&
-			glLocation.y > bounds.top &&
-			glLocation.y < bounds.bottom + bounds.top)
-		{
-			this->touch = touch;
-			
-			if (!m_active)
-			{
-				std::tr1::shared_ptr<CR::Sound::ISoundFX> sound;
-				sound = ISound::Instance().CreateSoundFX(CR::AssetList::sounds::building_notcharged_1a::ID);
-				sound->Play();
-				return;
-			}
-			
-			OnDown(m_tag);
-		}
-
-	}
+	buttonSprite->SetDesignSize(_width, _height);
 }
-
-void BuildingButtonControl::TouchesMovedImpl(UIView *view, NSSet *touches)
-{
-	if (!m_active || this->touch != NULL)
-	{
-		//std::tr1::shared_ptr<CR::Sound::ISoundFX> sound;
-		//sound = ISound::Instance().CreateSoundFX(CR::AssetList::sounds::building_notcharged_1a::ID);
-		//sound->Play();
-		
-		return;
-	}
-	
-	CGPoint glLocation;
-	for (UITouch *touch in touches)
-	{
-		if (this->touch != NULL && touch != this->touch)
-			continue;
-		
-		glLocation = GetGLLocation(view, touch);
-		
-		if (glLocation.x > bounds.left && 
-			glLocation.x < bounds.right + bounds.left &&
-			glLocation.y > bounds.top &&
-			glLocation.y < bounds.bottom + bounds.top)
-		{
-			// TODO: Test this
-			this->touch = touch;
-			OnDown(m_tag);
-		}
-	}
-}
-
-void BuildingButtonControl::TouchesEndedImpl(UIView *view, NSSet *touches)
-{
-	for (UITouch *touch in touches)
-	{
-		if (touch == this->touch)
-		{
-			if (m_active)
-			{
-				StartCountDown();
-				OnUp(m_tag);
-			}
-			
-			this->touch = NULL;
-			break;
-		}
-	}
-}
-
-void BuildingButtonControl::TouchesCancelledImpl(UIView *view, NSSet *touches)
-{
-	for (UITouch *touch in touches)
-	{
-		if (touch == this->touch)
-		{
-			this->touch = NULL;
-			break;
-		}
-	}
-}*/

@@ -20,6 +20,7 @@ TileSelector::TileSelector(ResourcePuzzle *parentPuzzle)
 	
 	m_selectorSprite = graphics_engine->CreateSprite1(true,800);
 	m_selectorSprite->SetImage(CR::AssetList::Selector_1);
+	m_selectorSprite->SetDesignSize(44, 44);
 
 	m_position.X(0);
 	m_position.Y(0);

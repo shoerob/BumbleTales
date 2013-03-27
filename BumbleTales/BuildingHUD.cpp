@@ -27,12 +27,18 @@ BuildingHUD::BuildingHUD(ResourcePuzzle *resourcePuzzle) : m_touchID(-1)
 	}
 	
 	buildingButtons[TownHall]->SetSprite(CR::AssetList::Building_Town_Hall);
+	buildingButtons[TownHall]->SetDesignSize(71, 51);
 	buildingButtons[PoliceStation]->SetSprite(CR::AssetList::Building_Police_Station);
+	buildingButtons[PoliceStation]->SetDesignSize(60, 50);
 	buildingButtons[Firehouse]->SetSprite(CR::AssetList::Building_Firehouse);
+	buildingButtons[Firehouse]->SetDesignSize(50, 56);
 	buildingButtons[Lodge]->SetSprite(CR::AssetList::Building_Lodge);
+	buildingButtons[Lodge]->SetDesignSize(66, 53);
 	buildingButtons[Theatre]->SetSprite(CR::AssetList::Building_Theatre);
+	buildingButtons[Theatre]->SetDesignSize(61, 51);
 	buildingButtons[Greenhouse]->SetSprite(CR::AssetList::Building_Greenhouse);
-	
+	buildingButtons[Greenhouse]->SetDesignSize(70, 64);
+
 	m_resourcePuzzle = resourcePuzzle;
 }
 

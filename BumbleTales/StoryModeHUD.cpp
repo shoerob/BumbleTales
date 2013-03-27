@@ -20,6 +20,7 @@ StoryModeHUD::StoryModeHUD(int xLoc, int yLoc)
 	
 	hudSprite = graphics_engine->CreateSprite1(false,900);
 	hudSprite->SetImage(CR::AssetList::Story_Mode_HUD);
+	hudSprite->SetDesignSize(202, 55);
 	hudSprite->SetPositionAbsolute(offset.X(), offset.Y());
 	
 	// Create resource bars
@@ -31,9 +32,9 @@ StoryModeHUD::StoryModeHUD(int xLoc, int yLoc)
 	resourceBars[Diamond] = new ResourceBar(offset.X() + 71, offset.Y() + 17);
 	
 	// Create level counter
-	//levelCounter = new CounterFont(CR::AssetList::Font_Level, offset.X() - 70, offset.Y() + 10);
 	numberFont = new NumberFont(CR::AssetList::Font_Level,800);
 	numberFont->SetPosition(offset.X() - 61, offset.Y() + 10);
+	numberFont->SetDesignSize(15, 18);
 	m_currLevel = 0;
 }
 

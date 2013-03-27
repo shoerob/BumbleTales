@@ -19,6 +19,7 @@ ArcadeModeView::ArcadeModeView()
 {
 	backgroundSprite = graphics_engine->CreateSprite1(false,1000);
 	backgroundSprite->SetImage(CR::AssetList::Story_Mode_Background);
+	backgroundSprite->SetDesignSize(320, 480);
 	backgroundSprite->SetPositionAbsolute(160, 240);
 	
 	resourcePuzzle = new ResourcePuzzle(3, 70, 1);
@@ -29,6 +30,7 @@ ArcadeModeView::ArcadeModeView()
 	
 	pauseButton = new Input_Button();
 	pauseButton->SetSpriteAndBounds(260, 10, CR::AssetList::Pause_Button, 900);
+	pauseButton->DesignSize(53, 51);
 	input_objects.push_back(pauseButton);
 	pauseButton->OnClicked += Delegate(this, &ArcadeModeView::OnPauseButtonPressed);
 	
@@ -68,6 +70,7 @@ ArcadeModeView::ArcadeModeView()
 	
 	hudClipSprite = graphics_engine->CreateSprite1(false, 925);
 	hudClipSprite->SetImage(CR::AssetList::Story_Mode_HUD_Top);
+	hudClipSprite->SetDesignSize(320, 70);
 	hudClipSprite->SetPositionAbsolute(160, 35);
 	
 	playedArcadeReady = false;

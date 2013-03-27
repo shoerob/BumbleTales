@@ -14,11 +14,17 @@ extern CR::Graphics::GraphicsEngine *graphics_engine;
 
 CharacterStats::CharacterStats() : m_spriteHelperStats(CR::AssetList::Char_HUD_Stat,true,700), m_spriteHelperResource(CR::AssetList::Char_HUD_Resource,true,700)
 {
+	m_spriteHelperStats.SetDesignSize(13, 13);
+	m_spriteHelperResource.SetDesignSize(14, 13);
+
 	statsSprite = graphics_engine->CreateSprite1(false,700);
 	statsSprite->SetImage(CR::AssetList::Char_HUD_Stat);
-	
+	statsSprite->SetDesignSize(13, 13);
+
 	resourceSprite = graphics_engine->CreateSprite1(false,700);
 	resourceSprite->SetImage(CR::AssetList::Char_HUD_Resource);
+	resourceSprite->SetDesignSize(14, 13);
+
 	m_cBonus = CharBonus();
 	
 	SetPosition(0, 0);

@@ -16,6 +16,7 @@ TrophyButton::TrophyButton(TrophyName trophyName, int zPos) : m_touchID(-1)
 {
 	trophySprite = graphics_engine->CreateSprite1(true, zPos);
 	trophySprite->SetImage(CR::AssetList::Scrapbook_Trophy_Icons);
+	trophySprite->SetDesignSize(84, 84);
 	trophySprite->SetFrame((int)trophyName);
 	
 	SetPosition(0, 0);

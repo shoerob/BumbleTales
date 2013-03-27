@@ -21,42 +21,41 @@ ArcadeModeScoreView::ArcadeModeScoreView(ArcadeModeScoreData *scoreData)
 	
 	scoreBaseSprite = graphics_engine->CreateSprite1(false,500);
 	scoreBaseSprite->SetImage(CR::AssetList::Score_Base_2);
+	scoreBaseSprite->SetDesignSize(320, 480);
 	scoreBaseSprite->SetPositionAbsolute(160, 240);
 	
 	finalScoreSprite = graphics_engine->CreateSprite1(false,400);
 	finalScoreSprite->SetImage(CR::AssetList::Final_Score_Tag);
+	finalScoreSprite->SetDesignSize(196, 42);
 	finalScoreSprite->SetPositionAbsolute(160, 135);
 	
 	highScoreSprite = graphics_engine->CreateSprite1(false,400);
 	highScoreSprite->SetImage(CR::AssetList::High_Score_Tag);
+	highScoreSprite->SetDesignSize(250, 38);
 	highScoreSprite->SetPositionAbsolute(160, 226);
-	
-	//youGotTagsSprite = graphics_engine->CreateSprite1();
-	//youGotTagsSprite->SetImage(CR::AssetList::You_Got_Tags);
-	//youGotTagsSprite->SetPositionAbsolute(
-	
-	//okButton = new Input_Button();
-	//okButton->SetSpriteAndBounds(96, 400, CR::AssetList::Score_Ok_Button);
-	//okButton->OnClicked += Delegate(this, &ArcadeModeScoreView::OnOkButtonPressed);
-	//input_objects.push_back(okButton);
-	
+		
 	yesButton = new Input_Button();
 	yesButton->SetSpriteAndBounds(96, 400, CR::AssetList::Score_Yes_Button, 400);
+	yesButton->DesignSize(108, 65);
 	yesButton->OnClicked += Delegate(this, &ArcadeModeScoreView::OnYesButtonPressed);
 	yesButton->SetSound(CR::AssetList::sounds::shopopen::ID);
 	input_objects.push_back(yesButton);
 	
 	noButton = new Input_Button();
 	noButton->SetSpriteAndBounds(208, 400, CR::AssetList::Score_No_Button, 400);
+	noButton->DesignSize(109, 65);
 	noButton->OnClicked += Delegate(this, &ArcadeModeScoreView::OnNoButtonPressed);
 	noButton->SetSound(CR::AssetList::sounds::shopopen::ID);
 	input_objects.push_back(noButton);
 	
 	smallNumberFont = new NumberFont(CR::AssetList::Font_Score_1, 400);
+	smallNumberFont->SetDesignSize(12, 16);
 	smallNumberFont->SetAlignment(AlignFontRight);
 	bigNumberFont = new NumberFont(CR::AssetList::Font_Score_2, 400);
+	bigNumberFont->SetDesignSize(16, 20);
 	bigNumberFont->SetAlignment(AlignFontRight);
 	scoreNumberFont = new NumberFont(CR::AssetList::Font_Score_3, 400);
+	scoreNumberFont->SetDesignSize(43, 50);
 	scoreNumberFont->SetAlignment(AlignFontCenter);
 	
 	timeDisplay = new TimeDisplay();

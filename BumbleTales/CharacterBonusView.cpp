@@ -17,10 +17,12 @@ CharacterBonusView::CharacterBonusView()
 {
 	baseSprite = graphics_engine->CreateSprite1(false,500);
 	baseSprite->SetImage(CR::AssetList::Char_Bonus_Base);
+	baseSprite->SetDesignSize(320, 480);
 	baseSprite->SetPositionAbsolute(160, 240);
 	
 	closeButton = new Input_Button();
 	closeButton->SetSpriteAndBounds(110, 420, CR::AssetList::Char_Bonus_Close_Button, 400);
+	closeButton->DesignSize(101, 53);
 	closeButton->OnClicked += Delegate(this, &CharacterBonusView::OnCloseButtonPressed);
 	closeButton->SetSound(CR::AssetList::sounds::shopopen::ID);
 	input_objects.push_back(closeButton);
@@ -32,6 +34,7 @@ CharacterBonusView::CharacterBonusView()
 		for (int x = 0; x < 3; x++)
 		{
 			m_radioButtons[i] = new RadioButtonControl(CR::AssetList::Char_Bonus_Character_Active, CR::AssetList::Char_Dim);
+			m_radioButtons[i]->SetDesignSize(83, 82, 67, 68);
 			m_radioButtons[i]->SetPositionAndBounds(37 + x * 89, 75 + y * 84, 68, 68);
 			m_radioButtons[i]->OnRadioButtonSelected += Delegate1<CharacterBonusView, int>(this, &CharacterBonusView::OnRadioButtonSelected);
 			input_objects.push_back(m_radioButtons[i]);

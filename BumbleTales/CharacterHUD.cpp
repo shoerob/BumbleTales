@@ -19,9 +19,12 @@ CharacterHUD::CharacterHUD()
 	
 	Input_Button::Input_Button();
 	SetSpriteAndBounds(0, 0, CR::AssetList::Char_HUD_Base, 800);
-	
+	DesignSize(71, 81);
+
 	characterSprite = graphics_engine->CreateSprite1(true,700);
 	characterSprite->SetImage(CR::AssetList::Char_HUD_Character);
+	characterSprite->SetDesignSize(62, 39);
+
 	SetCharacter(Mayor, 1);
 	
 }

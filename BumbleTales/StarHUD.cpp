@@ -16,16 +16,20 @@ StarHUD::StarHUD()
 {
 	Input_Button::Input_Button();
 	SetSpriteAndBounds(0, 0, CR::AssetList::Star_HUD, 900);
-	
+	DesignSize(48, 57);
+
 	starSprite = graphics_engine->CreateSprite1(true,800);
 	starSprite->SetImage(CR::AssetList::Star_HUD_Animation);
-	
+	starSprite->SetDesignSize(29, 28);
+
 	numberFont = new NumberFont(CR::AssetList::Font_StarHUD, 700);
+	numberFont->SetDesignSize(10, 14);
 	m_numStars = 0;
 	
 	maxTag = graphics_engine->CreateSprite1(false, 800);
 	maxTag->SetImage(CR::AssetList::Max_Tag);
-	
+	maxTag->SetDesignSize(34, 21);
+
 	maxedOut = false;
 }
 

@@ -17,16 +17,19 @@ ConfirmEraseDialog::ConfirmEraseDialog()
 {
 	confirmEraseSprite = graphics_engine->CreateSprite1(false,300);
 	confirmEraseSprite->SetImage(CR::AssetList::Options_Confirm_Erase);
+	confirmEraseSprite->SetDesignSize(320, 480);
 	//confirmEraseSprite->Visible(false);
 	
 	yesButton = new Input_Button();
 	yesButton->SetSpriteAndBounds(0, 0, CR::AssetList::Options_Yes_Button, 200);
+	yesButton->DesignSize(128, 99);
 	yesButton->OnClicked += Delegate(this, &ConfirmEraseDialog::OnYesClicked);
 	yesButton->SetSound(CR::AssetList::sounds::shopopen::ID);
 	input_objects.push_back(yesButton);
 	
 	noButton = new Input_Button();
 	noButton->SetSpriteAndBounds(0, 0, CR::AssetList::Options_No_Button, 200);
+	noButton->DesignSize(129, 99);
 	noButton->OnClicked += Delegate(this, &ConfirmEraseDialog::OnNoClicked);
 	noButton->SetSound(CR::AssetList::sounds::shopopen::ID);
 	input_objects.push_back(noButton);

@@ -18,23 +18,28 @@ SBTrophyChapter::SBTrophyChapter()
 
 	bgSprite = graphics_engine->CreateSprite1(false, 300);
 	bgSprite->SetImage(CR::AssetList::Scrapbook_Trophy_Base_1);
+	bgSprite->SetDesignSize(320, 347);
 	bgSprite->SetPositionAbsolute(160, 250);
 	
 	trophyName = graphics_engine->CreateSprite1(true, 200);
 	trophyName->SetImage(CR::AssetList::Scrapbook_Trophy_Names);
+	trophyName->SetDesignSize(289, 186);
 	trophyName->SetPositionAbsolute(166, 208);
 	
 	scrapBookTags = graphics_engine->CreateSprite1(false, 199);
 	scrapBookTags->SetImage(CR::AssetList::Scrapbook_Tags_1);
+	scrapBookTags->SetDesignSize(193, 23);
 	scrapBookTags->SetFrameSet(16);
 	scrapBookTags->SetPositionAbsolute(104, 60);
 	
 	pageTags = graphics_engine->CreateSprite1(false, 199);
 	pageTags->SetImage(CR::AssetList::Scrapbook_Tags_2);
+	pageTags->SetDesignSize(68, 16);
 	pageTags->SetPositionAbsolute(275, 60);
 	
 	trophyInfo = graphics_engine->CreateSprite1(true, 200);
 	trophyInfo->SetImage(CR::AssetList::Scrapbook_Trophy_Info);
+	trophyInfo->SetDesignSize(253, 59);
 	trophyInfo->SetPositionAbsolute(160, 373);
 	
 	selectedTrophy = -1;

@@ -19,10 +19,12 @@ ShopMenuView::ShopMenuView()
 {
 	baseSprite = graphics_engine->CreateSprite1(false,500);
 	baseSprite->SetImage(CR::AssetList::Shop_Menu_Base);
+	baseSprite->SetDesignSize(320, 480);
 	baseSprite->SetPositionAbsolute(160, 240);
 	
 	closeButton = new Input_Button();
 	closeButton->SetSpriteAndBounds(110, 428, CR::AssetList::Char_Bonus_Close_Button, 400);
+	closeButton->DesignSize(101, 53);
 	closeButton->OnClicked += Delegate(this, &ShopMenuView::OnCloseButtonPressed);
 	//closeButton->SetSound(CR::AssetList::sounds::shopopen::ID);
 	input_objects.push_back(closeButton);
@@ -33,6 +35,7 @@ ShopMenuView::ShopMenuView()
 	input_objects.push_back(shopListing);
 	
 	numberFont = new NumberFont(CR::AssetList::Shop_Star_Font, 400);
+	numberFont->SetDesignSize(16, 21);
 	numberFont->SetPosition(293, 27);
 	
 	hasWonGame = false;

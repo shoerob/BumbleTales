@@ -16,7 +16,8 @@ ScrollNub::ScrollNub(int xLoc, int yLoc, int yRange) : m_touchID(-1)
 {
 	nubSprite = graphics_engine->CreateSprite1(false,400);
 	nubSprite->SetImage(CR::AssetList::Shop_Scroll_Cursor);
-	
+	nubSprite->SetDesignSize(17, 17);
+
 	minPos.X(xLoc);
 	minPos.Y(yLoc);
 	maxPos.X(xLoc);

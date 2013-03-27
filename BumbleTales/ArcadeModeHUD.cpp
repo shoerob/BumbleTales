@@ -20,6 +20,7 @@ ArcadeModeHUD::ArcadeModeHUD(int xLoc, int yLoc)
 	
 	hudSprite = graphics_engine->CreateSprite1(false, 900);
 	hudSprite->SetImage(CR::AssetList::Arcade_Mode_HUD);
+	hudSprite->SetDesignSize(253, 60);
 	hudSprite->SetPositionAbsolute(offset.X(), offset.Y());
 	
 	timerBar = new TimerBar(xLoc - 108, yLoc);
@@ -36,8 +37,10 @@ ArcadeModeHUD::ArcadeModeHUD(int xLoc, int yLoc)
 	// Create level counter
 	numberFont = new NumberFont(CR::AssetList::Arcade_Mode_Font_Level2, 800);
 	numberFont->SetPosition(offset.X() - 71, offset.Y() - 17);
-	
+	numberFont->SetDesignSize(11, 15);
+
 	scoreFont = new NumberFont(CR::AssetList::Arcade_Mode_Font_HUDScore, 800);
+	scoreFont->SetDesignSize(16, 18);
 	scoreFont->SetPosition(offset.X() - 40, offset.Y() + 15);
 	scoreFont->SetAlignment(AlignFontRight);
 	m_currLevel = 1;

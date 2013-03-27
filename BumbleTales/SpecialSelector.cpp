@@ -17,6 +17,7 @@ SpecialSelector::SpecialSelector(ResourcePuzzle *parentPuzzle)
 {
 	selectorSprite = graphics_engine->CreateSprite1(true,800);
 	selectorSprite->SetImage(CR::AssetList::Selector_2);
+	selectorSprite->SetDesignSize(44, 44);
 	m_parentPuzzle = parentPuzzle;
 	m_isSelector3 = false;
 	tilesExploded = false;
@@ -83,6 +84,7 @@ void SpecialSelector::SetTilePosition(int x, int y)
 void SpecialSelector::ShowSelector2()
 {
 	selectorSprite->SetImage(CR::AssetList::Selector_2);
+	selectorSprite->SetDesignSize(44, 44);
 	selectorSprite->SetFrame(0);
 	selectorSprite->SetAutoAnimate(true);
 	m_isSelector3 = false;
@@ -91,6 +93,7 @@ void SpecialSelector::ShowSelector2()
 void SpecialSelector::ShowSelector3()
 {
 	selectorSprite->SetImage(CR::AssetList::Selector_3);
+	selectorSprite->SetDesignSize(44, 44);
 	selectorSprite->SetFrame(0);
 	selectorSprite->AutoStopAnimate();
 	m_isSelector3 = true;

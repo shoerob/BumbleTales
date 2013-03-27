@@ -12,6 +12,7 @@
 #include "Graphics.h"
 #include <functional>
 #include "FunctionObjects.h"
+#include "Vector.h"
 
 extern CR::Graphics::GraphicsEngine *graphics_engine;
 
@@ -19,6 +20,7 @@ using namespace std;
 using namespace CR::Graphics;
 using namespace CR::Game;
 using namespace CR::Utility;
+using namespace CR::Math;
 
 namespace CR
 {
@@ -36,12 +38,14 @@ namespace CR
 			void Start();
 			void End();			
 			void SetImage(int _image);
+			void SetDesignSize(int _width, int _height) { m_DesignSize = int2(_width, _height); }
 		private:
 			vector<Sprite*> m_sprites;
 			int m_currentSprite;
 			bool m_singleSetMode;
 			int m_zInitial;
 			int m_image;
+			int2 m_DesignSize;
 		};
 	}
 }
@@ -64,6 +68,7 @@ void RepeatedSpriteHelperImpl::NewSprite()
 	{
 		m_sprites.push_back(graphics_engine->CreateSprite1(m_singleSetMode, m_zInitial));
 		m_sprites[m_currentSprite]->SetImage(m_image);
+		m_sprites[m_currentSprite]->SetDesignSize(m_DesignSize.X, m_DesignSize.Y);
 	}
 	m_sprites[m_currentSprite]->Render();
 }
@@ -142,4 +147,9 @@ void RepeatedSpriteHelper::End()
 void RepeatedSpriteHelper::SetImage(int _image)
 {
 	m_impl->SetImage(_image);
+}
+
+void RepeatedSpriteHelper::SetDesignSize(int _width, int _height)
+{
+	m_impl->SetDesignSize(_width, _height);
 }

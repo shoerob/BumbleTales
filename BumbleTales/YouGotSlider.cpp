@@ -16,6 +16,7 @@ YouGotSlider::YouGotSlider()
 {
 	youGotTagsSprite = graphics_engine->CreateSprite1(false,400);
 	youGotTagsSprite->SetImage(CR::AssetList::You_Got_Tags);
+	youGotTagsSprite->SetDesignSize(211, 44);
 	
 	m_gotTrophy = false;
 	m_gotStar = false;

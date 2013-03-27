@@ -22,10 +22,12 @@ ShopItem::ShopItem(): m_touchID(-1)
 	
 	plusButton = new Input_Button();
 	plusButton->SetSpriteAndBounds(0, 0, CR::AssetList::Shop_Plus_Button, 400);
+	plusButton->DesignSize(37, 36);
 	plusButton->OnClicked += Delegate(this, &ShopItem::PlusClicked);
 	
 	plusDimmerSprite = graphics_engine->CreateSprite1(false,300);
 	plusDimmerSprite->SetImage(CR::AssetList::Shop_Plus_Dimmer);
+	plusDimmerSprite->SetDesignSize(37, 36);
 }
 
 ShopItem::~ShopItem()

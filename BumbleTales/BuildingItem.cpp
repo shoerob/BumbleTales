@@ -11,12 +11,15 @@
 #include "AssetList.h"
 #include "ShopListing.h"
 
+using namespace CR::Math;
+
 extern CR::Graphics::GraphicsEngine *graphics_engine;
 
 BuildingItem::BuildingItem(BuildingName buildingName, int level, ShopListing *shopListing)
 {
 	lockedItemsSprite = graphics_engine->CreateSprite1(false, 265);
 	lockedItemsSprite->SetImage(CR::AssetList::Shop_Locks);
+	lockedItemsSprite->SetDesignSize(254, 69);
 	lockedItemsSprite->SetFrameSet((int)buildingName);
 	
 	this->shopListing = shopListing;
@@ -27,27 +30,39 @@ BuildingItem::BuildingItem(BuildingName buildingName, int level, ShopListing *sh
 	{
 		case TownHall:
 			itemSprite->SetImage(CR::AssetList::Shop_Item_01);
+			itemSprite->SetDesignSize(248, 70);
 			m_infoAsset = CR::AssetList::Shop_Info_Gold;
+			m_infoDesignSize = int2(239, 40);
 			break;
 		case PoliceStation:
 			itemSprite->SetImage(CR::AssetList::Shop_Item_02);
+			itemSprite->SetDesignSize(248, 70);
 			m_infoAsset = CR::AssetList::Shop_Info_Blue;
+			m_infoDesignSize = int2(241, 40);
 			break;
 		case Firehouse:
 			itemSprite->SetImage(CR::AssetList::Shop_Item_03);
+			itemSprite->SetDesignSize(248, 70);
 			m_infoAsset = CR::AssetList::Shop_Info_Fire;
+			m_infoDesignSize = int2(251, 39);
 			break;
 		case Lodge:
 			itemSprite->SetImage(CR::AssetList::Shop_Item_04);
+			itemSprite->SetDesignSize(248, 70);
 			m_infoAsset = CR::AssetList::Shop_Info_Brown;
+			m_infoDesignSize = int2(261, 39);
 			break;
 		case Theatre:
 			itemSprite->SetImage(CR::AssetList::Shop_Item_05);
+			itemSprite->SetDesignSize(248, 70);
 			m_infoAsset = CR::AssetList::Shop_Info_Pink;
+			m_infoDesignSize = int2(221, 40);
 			break;
 		case Greenhouse:
 			itemSprite->SetImage(CR::AssetList::Shop_Item_06);
+			itemSprite->SetDesignSize(248, 70);
 			m_infoAsset = CR::AssetList::Shop_Info_Green;
+			m_infoDesignSize = int2(247, 40);
 			break;
 		default:
 			break;

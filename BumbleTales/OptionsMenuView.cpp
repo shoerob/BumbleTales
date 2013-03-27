@@ -22,12 +22,14 @@ OptionsMenuView::OptionsMenuView(bool allowEraseData)
 	
 	exitButton = new Input_Button();
 	exitButton->SetSpriteAndBounds(51, 420, CR::AssetList::Options_Exit_Button, 400);
+	exitButton->DesignSize(218, 52);
 	exitButton->OnClicked += Delegate(this, &OptionsMenuView::OnExitButtonClicked);
 	exitButton->SetSound(CR::AssetList::sounds::shopopen::ID);
 	input_objects.push_back(exitButton);
 	
 	headerSprite = graphics_engine->CreateSprite1(false,400);
 	headerSprite->SetImage(CR::AssetList::Options_Header);
+	headerSprite->SetDesignSize(191, 50);
 	headerSprite->SetPositionAbsolute(160, 48);
 	
 	eraseDataButton = NULL;
@@ -35,6 +37,7 @@ OptionsMenuView::OptionsMenuView(bool allowEraseData)
 	{
 		eraseDataButton = new Input_Button();
 		eraseDataButton->SetSpriteAndBounds(202, 8, CR::AssetList::Options_Erase_Data_Button, 400);
+		eraseDataButton->DesignSize(114, 73);
 		eraseDataButton->OnClicked += Delegate(this, &OptionsMenuView::OnEraseDataButtonClicked);
 		eraseDataButton->SetSound(CR::AssetList::sounds::shopopen::ID);
 		input_objects.push_back(eraseDataButton);
@@ -43,6 +46,7 @@ OptionsMenuView::OptionsMenuView(bool allowEraseData)
 	
 	menuBackground = graphics_engine->CreateSprite1(false,500);
 	menuBackground->SetImage(CR::AssetList::Options_Base);
+	menuBackground->SetDesignSize(320, 480);
 	menuBackground->SetPositionAbsolute(160, 240);
 	
 	confirmEraseDialog = new ConfirmEraseDialog();
@@ -53,22 +57,22 @@ OptionsMenuView::OptionsMenuView(bool allowEraseData)
 	// Checkboxes
 	hintsCheckbox = new CheckboxControl();
 	hintsCheckbox->SetSpriteAndPosition(CR::AssetList::Options_Check, 47, 90);
+	hintsCheckbox->DesignSize(76, 73);
 	hintsCheckbox->SetButtonBounds(30, 102, 70, 70);
-	//hintsCheckbox->SetSpriteAndBounds(47, 90, CR::AssetList::Options_Check);
 	input_objects.push_back(hintsCheckbox);
 	
 	musicCheckbox = new CheckboxControl();
 	musicCheckbox->SetSpriteAndPosition(CR::AssetList::Options_Check, 47, 194);
+	musicCheckbox->DesignSize(76, 73);
 	musicCheckbox->SetButtonBounds(30, 207, 70, 70);
 	musicCheckbox->OnCheckChanged += Delegate(this, &OptionsMenuView::OnMusicToggled);
-	//musicCheckbox->SetSpriteAndBounds(47, 194, CR::AssetList::Options_Check);
 	input_objects.push_back(musicCheckbox);
 	
 	soundCheckbox = new CheckboxControl();
 	soundCheckbox->SetSpriteAndPosition(CR::AssetList::Options_Check, 47, 300);
+	soundCheckbox->DesignSize(76, 73);
 	soundCheckbox->SetButtonBounds(30, 313, 70, 70);
 	soundCheckbox->OnCheckChanged += Delegate(this, &OptionsMenuView::OnSoundToggled);
-	//soundCheckbox->SetSpriteAndBounds(47, 300, CR::AssetList::Options_Check);
 	input_objects.push_back(soundCheckbox);
 }
 

@@ -16,15 +16,17 @@ PauseMenu::PauseMenu()
 {
 	pauseBackground = graphics_engine->CreateSprite1();
 	pauseBackground->SetImage(CR::AssetList::Pause_Menu_Background);
-	//pauseBackground->SetPositionAbsolute(160, 240);
+	pauseBackground->SetDesignSize(320, 480);
 	
 	resumeGameButton = new Input_Button();
 	resumeGameButton->SetSpriteAndBounds(0, 0, CR::AssetList::Pause_Resume_Game_Button);
+	resumeGameButton->DesignSize(217, 53);
 	resumeGameButton->OnClicked += Delegate(this, &PauseMenu::OnResumeGameButtonPressed);
 	input_objects.push_back(resumeGameButton);
 	
 	mainMenuButton = new Input_Button();
 	mainMenuButton->SetSpriteAndBounds(0, 0, CR::AssetList::Pause_Main_Menu_Button);
+	mainMenuButton->DesignSize(217, 53);
 	mainMenuButton->OnClicked += Delegate(this, &PauseMenu::OnMainMenuButtonPressed);
 	input_objects.push_back(mainMenuButton);
 	

@@ -17,29 +17,31 @@ extern CR::Graphics::GraphicsEngine *graphics_engine;
 
 StoryModeScoreView::StoryModeScoreView(StoryModeScoreData *scoreData) : m_spriteHelperMedals(CR::AssetList::Medal_Icons,true,400)
 {
+	m_spriteHelperMedals.SetDesignSize(29, 29);
+
 	this->m_scoreData = scoreData;
 	
 	scoreBaseSprite = graphics_engine->CreateSprite1(false,500);
 	scoreBaseSprite->SetImage(CR::AssetList::Score_Base_1);
+	scoreBaseSprite->SetDesignSize(320, 480);
 	scoreBaseSprite->SetPositionAbsolute(160, 240);
 	
 	medalIconsSprite = graphics_engine->CreateSprite1(false,400);
 	medalIconsSprite->SetImage(CR::AssetList::Medal_Icons);
-	
+	medalIconsSprite->SetDesignSize(29, 29);
+
 	okButton = new Input_Button();
 	okButton->SetSpriteAndBounds(96, 400, CR::AssetList::Score_Ok_Button, 400);
+	okButton->DesignSize(128, 75);
 	okButton->OnClicked += Delegate(this, &StoryModeScoreView::OnOkButtonPressed);
 	okButton->SetSound(CR::AssetList::sounds::shopopen::ID);
 	input_objects.push_back(okButton);
 	
-	//resourceCounter = new CounterFont(CR::AssetList::Font_Score_1,200,300);
-	//resourceCounter->SetCount(0);
-	
-	//bigCounter = new CounterFont(CR::AssetList::Font_Score_2, 200, 300);
-	//bigCounter->SetCount(0);
 	smallNumberFont = new NumberFont(CR::AssetList::Font_Score_1, 400);
+	smallNumberFont->SetDesignSize(12, 16);
 	smallNumberFont->SetAlignment(AlignFontRight);
 	bigNumberFont = new NumberFont(CR::AssetList::Font_Score_2, 400);
+	bigNumberFont->SetDesignSize(16, 20);
 	bigNumberFont->SetAlignment(AlignFontRight);
 	
 	timeDisplay = new TimeDisplay();

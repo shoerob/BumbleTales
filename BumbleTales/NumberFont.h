@@ -33,6 +33,8 @@ public:
 	void Begin();
 	void End();
 	void SetFontAsset(int _asset);
+	void SetDesignSize(int _width, int _height);
+
 private:
 	CR::Math::PointF offset;
 	CR::Graphics::Sprite *numberSprite;

@@ -16,24 +16,31 @@ ParticleSystemManager::ParticleSystemManager()
 {
 	CR::Graphics::Sprite *tmpSprite = graphics_engine->CreateSprite1(true, 600);
 	tmpSprite->SetImage(CR::AssetList::Piece_Shatter_0);
+	tmpSprite->SetDesignSize(28, 26);
 	dummyParticles.push_back(tmpSprite);
 	tmpSprite = graphics_engine->CreateSprite1(true, 600);
 	tmpSprite->SetImage(CR::AssetList::Piece_Shatter_1);
+	tmpSprite->SetDesignSize(28, 26);
 	dummyParticles.push_back(tmpSprite);
 	tmpSprite = graphics_engine->CreateSprite1(true, 600);
 	tmpSprite->SetImage(CR::AssetList::Piece_Shatter_2);
+	tmpSprite->SetDesignSize(28, 26);
 	dummyParticles.push_back(tmpSprite);
 	tmpSprite = graphics_engine->CreateSprite1(true, 600);
 	tmpSprite->SetImage(CR::AssetList::Piece_Shatter_3);
+	tmpSprite->SetDesignSize(28, 26);
 	dummyParticles.push_back(tmpSprite);
 	tmpSprite = graphics_engine->CreateSprite1(true, 600);
 	tmpSprite->SetImage(CR::AssetList::Piece_Shatter_4);
+	tmpSprite->SetDesignSize(28, 26);
 	dummyParticles.push_back(tmpSprite);
 	tmpSprite = graphics_engine->CreateSprite1(true, 600);
 	tmpSprite->SetImage(CR::AssetList::Piece_Shatter_5);
+	tmpSprite->SetDesignSize(28, 26);
 	dummyParticles.push_back(tmpSprite);
 	tmpSprite = graphics_engine->CreateSprite1(true, 600);
 	tmpSprite->SetImage(CR::AssetList::Piece_Shatter_6);
+	tmpSprite->SetDesignSize(28, 26);
 	dummyParticles.push_back(tmpSprite);
 }
 

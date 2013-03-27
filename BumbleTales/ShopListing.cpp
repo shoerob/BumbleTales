@@ -31,12 +31,9 @@ ShopListing::ShopListing(int xLoc, int yLoc) : m_touchID(-1)
 	
 	characterBonus = new CharacterBonus();
 	newEntrySplash = new SplashScreen(CR::AssetList::Shop_New_Entry_Message, 2, 250);
+	newEntrySplash->DesignSize(265, 90);
 	newEntrySplash->SetPosition(160, 240);
 	newEntrySplash->SplashFinished += Delegate(this, &ShopListing::OnNewEntrySplashFinished);
-	
-	//itemLockedSplash = new SplashScreen(CR::AssetList::Shop_Locks, 2, 250);
-	//itemLockedSplash->SetPosition(160, 240);
-	//itemLockedSplash->SplashFinished += Delegate(this, &ShopListing::OnNewEntrySplashFinished);
 	
 	yDownPos = 0;
 	nubTouchMode = true;
@@ -112,6 +109,7 @@ void ShopListing::DisplayWinGameSplash()
 {
 	// TODO: Change NewEntrySplash to display WIN GAME splash
 	newEntrySplash->SetSplashAsset(CR::AssetList::Epilogue_Popup, 2);
+	newEntrySplash->DesignSize(265, 173);
 	newEntrySplash->StartSplash();
 }
 
@@ -157,6 +155,7 @@ void ShopListing::OnShopItemClicked(ShopItem *item)
 	{
 		infoSprite->SetPositionAbsolute(160, 390);
 		infoSprite->SetImage(item->GetInformationAsset());
+		infoSprite->SetDesignSize(item->GetInformationDesignSize().X, item->GetInformationDesignSize().Y);
 		infoSprite->SetFrame(item->GetLevel());
 		m_showInfoSprite = true;
 	}
@@ -164,6 +163,7 @@ void ShopListing::OnShopItemClicked(ShopItem *item)
 	{
 		infoSprite->SetPositionAbsolute(160, 390);
 		infoSprite->SetImage(item->GetInformationAsset());
+		infoSprite->SetDesignSize(item->GetInformationDesignSize().X, item->GetInformationDesignSize().Y);
 	
 		CharacterName cName = ((CharacterItem*)item)->GetCharacterName();
 		//infoSprite->SetFrame(item->GetLevel());

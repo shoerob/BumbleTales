@@ -18,7 +18,8 @@ ChainEffect::ChainEffect(int amount, float xLoc, float yLoc)
 	
 	chainSprite = graphics_engine->CreateSprite1(true, 790);
 	chainSprite->SetImage(CR::AssetList::Chain_Match_Tags);
-	
+	chainSprite->SetDesignSize(70, 69);
+
 	if (amount > 20)
 		chainSprite->SetFrame(20);
 	else

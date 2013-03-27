@@ -19,10 +19,12 @@ SBRecordChapter::SBRecordChapter()
 	
 	pageTags = graphics_engine->CreateSprite1(false, 199);
 	pageTags->SetImage(CR::AssetList::Scrapbook_Tags_2);
+	pageTags->SetDesignSize(68, 16);
 	pageTags->SetPositionAbsolute(275, 60);
 	
 	scrapBookTags = graphics_engine->CreateSprite1(false, 199);
 	scrapBookTags->SetImage(CR::AssetList::Scrapbook_Tags_1);
+	scrapBookTags->SetDesignSize(193, 23);
 	scrapBookTags->SetFrameSet(16);
 	scrapBookTags->SetPositionAbsolute(104, 60);
 	

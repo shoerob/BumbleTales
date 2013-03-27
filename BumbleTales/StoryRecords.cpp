@@ -17,12 +17,15 @@ StoryRecords::StoryRecords()
 {
 	bgSprite = graphics_engine->CreateSprite1(false, 300);
 	bgSprite->SetImage(CR::AssetList::Scrapbook_Records_Base_1);
+	bgSprite->SetDesignSize(320, 347);
 	bgSprite->SetPositionAbsolute(160, 250);
 	
 	specialFont = new NumberFont(CR::AssetList::Scrapbook_Font_Records_1, 200);
+	specialFont->SetDesignSize(12, 16);
 	specialFont->SetAlignment(AlignFontRight);
 	
 	smallNumFont = new NumberFont(CR::AssetList::Scrapbook_Font_Records_1, 200);
+	smallNumFont->SetDesignSize(12, 16);
 	smallNumFont->SetAlignment(AlignFontRight);
 }
 

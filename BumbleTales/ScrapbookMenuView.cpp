@@ -22,10 +22,12 @@ ScrapbookMenuView::ScrapbookMenuView(bool wonGame)
 {
 	baseSprite = graphics_engine->CreateSprite1(false, 500);
 	baseSprite->SetImage(CR::AssetList::Scrapbook_Background);
+	baseSprite->SetDesignSize(320, 480);
 	baseSprite->SetPositionAbsolute(160, 240);
 	
 	rimSprite = graphics_engine->CreateSprite1(false, 400);
 	rimSprite->SetImage(CR::AssetList::Scrapbook_Category_Rim);
+	rimSprite->SetDesignSize(100, 40);
 	rimSprite->SetPositionAbsolute(55, 25);
 	
 	exitButton = new Input_Button();
@@ -36,30 +38,35 @@ ScrapbookMenuView::ScrapbookMenuView(bool wonGame)
 	
 	prevButton = new Input_Button();
 	prevButton->SetSpriteAndBounds(6, 432, CR::AssetList::Scrapbook_LArrow_Button, 300);
+	prevButton->SetSpriteAndBounds(2, 432, CR::AssetList::Scrapbook_LArrow_Button, 400);
 	prevButton->OnClicked += Delegate(this, &ScrapbookMenuView::OnPrevButtonClicked);
 	prevButton->SetSound(CR::AssetList::sounds::scrapbookpageturn1::ID);
 	input_objects.push_back(prevButton);
 	
 	nextButton = new Input_Button();
 	nextButton->SetSpriteAndBounds(217, 432, CR::AssetList::Scrapbook_RArrow_Button, 300);
+	nextButton->DesignSize(97, 49);
 	nextButton->OnClicked += Delegate(this, &ScrapbookMenuView::OnNextButtonClicked);
 	nextButton->SetSound(CR::AssetList::sounds::scrapbookpageturn1::ID);
 	input_objects.push_back(nextButton);
 	
 	charactersButton = new Input_Button();
 	charactersButton->SetSpriteAndBounds(1, 5, CR::AssetList::Scrapbook_Characters_Button, 300);
+	charactersButton->DesignSize(108, 47);
 	charactersButton->OnClicked += Delegate(this, &ScrapbookMenuView::OnCharactersButtonClicked);
 	charactersButton->SetSound(CR::AssetList::sounds::shopopen::ID);
 	input_objects.push_back(charactersButton);
 	
 	recordsButton = new Input_Button();
 	recordsButton->SetSpriteAndBounds(106, 5, CR::AssetList::Scrapbook_Records_Button, 300);
+	recordsButton->DesignSize(108, 47);
 	recordsButton->OnClicked += Delegate(this, &ScrapbookMenuView::OnRecordsButtonClicked);
 	recordsButton->SetSound(CR::AssetList::sounds::shopopen::ID);
 	input_objects.push_back(recordsButton);
 	
 	trophiesButton = new Input_Button();
 	trophiesButton->SetSpriteAndBounds(211, 5, CR::AssetList::Scrapbook_Trophies_Button, 300);
+	trophiesButton->DesignSize(108, 47);
 	trophiesButton->OnClicked += Delegate(this, &ScrapbookMenuView::OnTrophiesButtonClicked);
 	trophiesButton->SetSound(CR::AssetList::sounds::shopopen::ID);
 	input_objects.push_back(trophiesButton);

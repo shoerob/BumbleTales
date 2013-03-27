@@ -16,12 +16,15 @@ ArcadeRecords::ArcadeRecords()
 {
 	bgSprite = graphics_engine->CreateSprite1(false, 300);
 	bgSprite->SetImage(CR::AssetList::Scrapbook_Records_Base_2);
+	bgSprite->SetDesignSize(320, 347);
 	bgSprite->SetPositionAbsolute(160, 250);
 	
 	bigNumFont = new NumberFont(CR::AssetList::Scrapbook_Font_Records_2, 200);
+	bigNumFont->SetDesignSize(14, 20);
 	bigNumFont->SetAlignment(AlignFontRight);
 	
 	smallNumFont = new NumberFont(CR::AssetList::Scrapbook_Font_Records_1, 200);
+	smallNumFont->SetDesignSize(12, 16);
 	smallNumFont->SetAlignment(AlignFontRight);
 	
 	timeDisplay = new TimeDisplay();

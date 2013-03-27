@@ -12,7 +12,7 @@
 
 extern CR::Graphics::GraphicsEngine *graphics_engine;
 
-CounterFont::CounterFont(int fontAsset = CR::AssetList::Font_Level, int xLoc = 0, int yLoc = 0)
+CounterFont::CounterFont(int fontAsset, int xLoc, int yLoc)
 {
 	offset.X(xLoc);
 	offset.Y(yLoc);
@@ -101,4 +101,9 @@ void CounterFont::UpdateDigits()
 		for (int i = 0; i < 3; i++)
 			digits[i] = 0;
 	}
+}
+
+void CounterFont::SetDesignSize(int _width, int _height)
+{
+	numberFont->SetDesignSize(_width, _height);
 }

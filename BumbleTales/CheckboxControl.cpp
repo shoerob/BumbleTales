@@ -102,76 +102,15 @@ void CheckboxControl::TouchesEndedImpl(Touch &_touches)
 	}
 }
 
-/*
-void CheckboxControl::TouchesBeganImpl(UIView *view, NSSet *touches)
-{
-	CGPoint glLocation;
-	for (UITouch *touch in touches)
-	{
-		if (this->touch != NULL && touch != this->touch)
-			continue;
-		
-		glLocation = GetGLLocation(view, touch);
-		
-		if (glLocation.x > bounds.left && 
-			glLocation.x < bounds.right + bounds.left &&
-			glLocation.y > bounds.top &&
-			glLocation.y < bounds.bottom + bounds.top)
-		{
-			m_isChecked = !m_isChecked;
-			OnCheckChanged();
-			this->touch = touch;
-		}
-	}
-}
-
-void CheckboxControl::TouchesMovedImpl(UIView *view, NSSet *touches)
-{
-	CGPoint glLocation;
-	for (UITouch *touch in touches)
-	{
-		if (this->touch != NULL && touch != this->touch)
-			continue;
-		
-		glLocation = GetGLLocation(view, touch);
-		
-		if (glLocation.x > bounds.left && 
-			glLocation.x < bounds.right + bounds.left &&
-			glLocation.y > bounds.top &&
-			glLocation.y < bounds.bottom + bounds.top)
-		{
-			this->touch = touch;
-		}
-	}
-}
-
-void CheckboxControl::TouchesEndedImpl(UIView *view, NSSet *touches)
-{
-	for (UITouch *touch in touches)
-	{
-		if (touch == this->touch)
-		{
-			this->touch = NULL;
-			break;
-		}
-	}
-}
-
-void CheckboxControl::TouchesCancelledImpl(UIView *view, NSSet *touches)
-{
-	for (UITouch *touch in touches)
-	{
-		if (touch == this->touch)
-		{
-			break;
-		}
-	}
-}*/
-
 void CheckboxControl::Reset()
 {
 }
 
 void CheckboxControl::FreeResources()
 {
+}
+
+void CheckboxControl::DesignSize(int _width, int _height)
+{
+	checkSprite->SetDesignSize(_width, _height);
 }

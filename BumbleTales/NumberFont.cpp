@@ -191,3 +191,9 @@ void NumberFont::SetFontAsset(int _asset)
 	numberSprite->SetImage(_asset);
 	m_spriteHelper.SetImage(_asset);
 }
+
+void NumberFont::SetDesignSize(int _width, int _height)
+{
+	numberSprite->SetDesignSize(_width, _height);
+	m_spriteHelper.SetDesignSize(_width, _height);
+}

@@ -16,6 +16,7 @@ ChainEffectManager::ChainEffectManager()
 {
 	dummyChainSprite = graphics_engine->CreateSprite1(true, 1000);
 	dummyChainSprite->SetImage(CR::AssetList::Chain_Match_Tags);
+	dummyChainSprite->SetDesignSize(70, 69);
 }
 
 ChainEffectManager::~ChainEffectManager()

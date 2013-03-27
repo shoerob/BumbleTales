@@ -27,6 +27,8 @@ namespace CR
 			void SetFrame(int _frame);
 			void SetFrameRate(int _frameRate);
 			void SetImage(int _image);
+			void SetDesignSize(int _width, int _height);
+
 		private:
 			std::auto_ptr<RepeatedSpriteHelperImpl> m_impl;
 		};

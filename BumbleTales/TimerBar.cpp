@@ -16,9 +16,11 @@ TimerBar::TimerBar(int xLoc, int yLoc)
 {
 	timeSprite = graphics_engine->CreateSprite1(false,800);
 	timeSprite->SetImage(CR::AssetList::Arcade_Mode_Time_Tag);
-	
+	timeSprite->SetDesignSize(26, 7);
+
 	barSprite = graphics_engine->CreateSprite1(true,800);
 	barSprite->SetImage(CR::AssetList::Arcade_Mode_Time_Bar);
+	barSprite->SetDesignSize(213, 11);
 	
 	maxTime = 30;
 	currTime = maxTime;

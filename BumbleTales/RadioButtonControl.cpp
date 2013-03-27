@@ -108,74 +108,8 @@ void RadioButtonControl::TouchesEndedImpl(Touch &_touches)
 	}
 }
 
-/*
-void RadioButtonControl::TouchesBeganImpl(UIView *view, NSSet *touches)
+void RadioButtonControl::SetDesignSize(int _widthActive, int _heightActive, int _widthDisabled, int _heightDisabled)
 {
-	CGPoint glLocation;
-	for (UITouch *touch in touches)
-	{
-		if (this->touch != NULL && touch != this->touch)
-			continue;
-		
-		glLocation = GetGLLocation(view, touch);
-		
-		if (glLocation.x > bounds.left && 
-			glLocation.x < bounds.right + bounds.left &&
-			glLocation.y > bounds.top &&
-			glLocation.y < bounds.bottom + bounds.top)
-		{
-			//m_isChecked = !m_isChecked;
-			
-			if (!m_disabled)
-			{
-				m_isSelected = true;
-				OnRadioButtonSelected(m_value);
-			}
-			
-			this->touch = touch;
-		}
-	}
+	selectedSprite->SetDesignSize(_widthActive, _heightActive);
+	disabledSprite->SetDesignSize(_widthDisabled, _heightDisabled);
 }
-
-void RadioButtonControl::TouchesMovedImpl(UIView *view, NSSet *touches)
-{
-	CGPoint glLocation;
-	for (UITouch *touch in touches)
-	{
-		if (this->touch != NULL && touch != this->touch)
-			continue;
-		
-		glLocation = GetGLLocation(view, touch);
-		
-		if (glLocation.x > bounds.left && 
-			glLocation.x < bounds.right + bounds.left &&
-			glLocation.y > bounds.top &&
-			glLocation.y < bounds.bottom + bounds.top)
-		{
-			this->touch = touch;
-		}
-	}
-}
-
-void RadioButtonControl::TouchesEndedImpl(UIView *view, NSSet *touches)
-{
-	for (UITouch *touch in touches)
-	{
-		if (touch == this->touch)
-		{
-			this->touch = NULL;
-			break;
-		}
-	}
-}
-
-void RadioButtonControl::TouchesCancelledImpl(UIView *view, NSSet *touches)
-{
-	for (UITouch *touch in touches)
-	{
-		if (touch == this->touch)
-		{
-			break;
-		}
-	}
-}*/

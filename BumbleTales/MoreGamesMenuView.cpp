@@ -18,32 +18,38 @@ MoreGamesMenuView::MoreGamesMenuView()
 {
 	menuBackground = graphics_engine->CreateSprite1(false,1000);
 	menuBackground->SetImage(CR::AssetList::InfoHelp_Background);
+	menuBackground->SetDesignSize(320, 480);
 	menuBackground->SetPositionAbsolute(160, 240);
 	
 	titleSprite = graphics_engine->CreateSprite1(false,500);
 	titleSprite->SetImage(CR::AssetList::InfoHelp_More_Games);
+	titleSprite->SetDesignSize(254, 74);
 	titleSprite->SetPositionAbsolute(160, 40);
 	
 	exitButton = new Input_Button();
 	exitButton->SetSpriteAndBounds(82, 432, CR::AssetList::InfoHelp_Main_Menu_Button, 500);
+	exitButton->DesignSize(157, 52);
 	exitButton->OnClicked += Delegate(this, &MoreGamesMenuView::OnExitButtonClicked);
 	exitButton->SetSound(CR::AssetList::sounds::shopopen::ID);
 	input_objects.push_back(exitButton);
 	
 	BoBButton = new Input_Button();
 	BoBButton->SetSpriteAndBounds(10, 85, CR::AssetList::InfoHelp_BoB_Button, 500);
+	BoBButton->DesignSize(301, 113);
 	BoBButton->OnClicked += Delegate(this, &MoreGamesMenuView::OnBoBClicked);
 	BoBButton->SetSound(CR::AssetList::sounds::shopopen::ID);
 	input_objects.push_back(BoBButton);
 	
 	AFTBButton = new Input_Button();
 	AFTBButton->SetSpriteAndBounds(10, 210, CR::AssetList::InfoHelp_AFTB_Button, 500);
+	AFTBButton->DesignSize(301, 113);
 	AFTBButton->OnClicked += Delegate(this, &MoreGamesMenuView::OnAFTBClicked);
 	AFTBButton->SetSound(CR::AssetList::sounds::shopopen::ID);
 	input_objects.push_back(AFTBButton);
 	
 	DOHButton = new Input_Button();
 	DOHButton->SetSpriteAndBounds(11, 335, CR::AssetList::InfoHelp_DoH_Button, 500);
+	DOHButton->DesignSize(299, 78);
 	DOHButton->OnClicked += Delegate(this, &MoreGamesMenuView::OnDOHClicked);
 	DOHButton->SetSound(CR::AssetList::sounds::shopopen::ID);
 	input_objects.push_back(DOHButton);

@@ -29,6 +29,7 @@ ResourceTile::ResourceTile(ResourcePuzzle *parentPuzzle, int xLoc, int yLoc)
 	// Generate the tile randomly
 	m_tileSprite = graphics_engine->CreateSprite1(false,950);
 	m_tileSprite->SetImage(CR::AssetList::Resource_Tiles);
+	m_tileSprite->SetDesignSize(60, 60);
 	//m_tileSprite->SetAutoAnimate(true);
 	m_tileSprite->SetFrameRate(20);
 	RandomizeType(NoTile);
@@ -43,6 +44,7 @@ ResourceTile::ResourceTile(ResourcePuzzle *parentPuzzle, int xLoc, int yLoc)
 	
 	selectorSprite = graphics_engine->CreateSprite1(true,800);
 	selectorSprite->SetImage(CR::AssetList::Selector_2);
+	selectorSprite->SetDesignSize(44, 44);
 	shakeToAnim = false;
 	
 
@@ -301,6 +303,7 @@ void ResourceTile::RenderSelectorSpecial(int _frame)
 {
 	//if (selectorSprite->GetImage() != CR::AssetList::Selector_2)
 		selectorSprite->SetImage(CR::AssetList::Selector_2);
+	selectorSprite->SetDesignSize(44, 44);
 	
 	selectorSprite->SetFrame(_frame);
 	selectorSprite->SetPositionAbsolute(position.X(), position.Y());
@@ -312,6 +315,7 @@ void ResourceTile::RenderSelectorExplode(int _frame)
 {
 	//if (selectorSprite->GetImage() != CR::AssetList::Selector_3)
 		selectorSprite->SetImage(CR::AssetList::Selector_3);
+	selectorSprite->SetDesignSize(44, 44);
 	
 	selectorSprite->SetFrame(_frame);
 	selectorSprite->SetPositionAbsolute(position.X(), position.Y());

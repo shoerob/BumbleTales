@@ -13,8 +13,10 @@
 TimeDisplay::TimeDisplay()
 {
 	numberFont = new NumberFont(CR::AssetList::Font_Score_2, 400);
+	numberFont->SetDesignSize(16, 20);
 	numberFont->SetAlignment(AlignFontRight);
 	colonFont = new NumberFont(CR::AssetList::Font_Score_2, 400);
+	colonFont->SetDesignSize(16, 20);
 	colonFont->SetAlignment(AlignFontRight);
 	m_seconds = 0;
 	SetPosition(0, 0);

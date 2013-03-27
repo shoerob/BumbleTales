@@ -10,6 +10,7 @@
 #include "Point.h"
 #include "Graphics.h"
 #include "IRenderable.h"
+#include "vector.h"
 
 enum ResourceBarSize { NormalResourceBar, TinyResourceBar };
 
@@ -44,4 +45,7 @@ private:
 	int assetResourceBar;
 	int assetResourceBarFull;
 	int barFrames;
+
+	CR::Math::int2 m_DesignWidthBar;
+	CR::Math::int2 m_DesignWidthBarFull;
 };

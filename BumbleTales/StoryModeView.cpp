@@ -22,9 +22,11 @@ StoryModeView::StoryModeView()
 {
 	backgroundSprite = graphics_engine->CreateSprite1(false,1000);
 	backgroundSprite->SetImage(CR::AssetList::Story_Mode_Background);
+	backgroundSprite->SetDesignSize(320, 480);
 	backgroundSprite->SetPositionAbsolute(160, 240);
 	
 	touchToEnterShop = new SplashScreen(CR::AssetList::Touch_to_Enter, 3, 775);
+	touchToEnterShop->DesignSize(117, 83);
 	touchToEnterShop->SetPosition(233, 105);
 	touchToEnterShop->SetFadeEffect(true);
 	
@@ -35,6 +37,7 @@ StoryModeView::StoryModeView()
 	
 	pauseButton = new Input_Button();
 	pauseButton->SetSpriteAndBounds(260, 10, CR::AssetList::Pause_Button, 800);
+	pauseButton->DesignSize(53, 51);
 	pauseButton->SetSound(CR::AssetList::sounds::shopopen::ID);
 	input_objects.push_back(pauseButton);
 	pauseButton->OnClicked += Delegate(this, &StoryModeView::OnPauseButtonPressed);
@@ -77,6 +80,7 @@ StoryModeView::StoryModeView()
 	megaBlocksCleared = 0;
 	hudClipSprite = graphics_engine->CreateSprite1(false, 925);
 	hudClipSprite->SetImage(CR::AssetList::Story_Mode_HUD_Top);
+	hudClipSprite->SetDesignSize(320, 70);
 	hudClipSprite->SetPositionAbsolute(160, 35);
 
 }

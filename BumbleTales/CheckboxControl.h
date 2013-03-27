@@ -22,10 +22,6 @@ public:
 	virtual void TouchesBeganImpl(Touch &_touches);
 	virtual void TouchesMovedImpl(Touch &_touches);
 	virtual void TouchesEndedImpl(Touch &_touches);
-	/*void TouchesBeganImpl(UIView *view, NSSet *touches);
-	void TouchesMovedImpl(UIView *view, NSSet *touches);
-	void TouchesEndedImpl(UIView *view, NSSet *touches);
-	void TouchesCancelledImpl(UIView *view, NSSet *touches);*/
 	void Reset();
 	void FreeResources();
 	
@@ -38,6 +34,8 @@ public:
 	
 	Event OnCheckChanged;
 	
+	void DesignSize(int _width, int _height);
+
 private:
 	Rect bounds;
 	bool m_isChecked;

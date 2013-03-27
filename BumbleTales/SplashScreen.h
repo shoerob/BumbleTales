@@ -30,7 +30,8 @@ public:
 	void PauseAnimation(bool pause);
 	void SetFrameSet(int frameSet);
 	Event SplashFinished;
-	
+	void DesignSize(int _width, int _height) { if(splashSprite) splashSprite->SetDesignSize(_width, _height); }
+
 private:
 	CR::Graphics::Sprite *splashSprite;
 	float m_baseDelayTime;

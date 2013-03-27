@@ -10,6 +10,8 @@
 #include "ResourceBar.h"
 #include "AssetList.h"
 
+using namespace CR::Math;
+
 extern CR::Graphics::GraphicsEngine *graphics_engine;
 
 ResourceBar::ResourceBar(int xLoc, int yLoc, ResourceBarSize rSize)
@@ -26,18 +28,23 @@ ResourceBar::ResourceBar(int xLoc, int yLoc, ResourceBarSize rSize)
 	if (rSize == NormalResourceBar)
 	{
 		assetResourceBar = CR::AssetList::Resource_Bar_1;
+		m_DesignWidthBar = int2(50, 10);
 		assetResourceBarFull = CR::AssetList::Resource_Bar_2;
+		m_DesignWidthBarFull = int2(50, 10);
 		barFrames = 51;
 	}
 	else if (rSize == TinyResourceBar)
 	{
 		assetResourceBar = CR::AssetList::Arcade_Mode_Resource_Bar_3;
+		m_DesignWidthBar = int2(13, 7);
 		assetResourceBarFull = CR::AssetList::Arcade_Mode_Resource_Bar_4;
+		m_DesignWidthBarFull = int2(13, 7);
 		barFrames = 21;
 	}
 	
 	resourceBarSprite = graphics_engine->CreateSprite1(false,800);
 	resourceBarSprite->SetImage(assetResourceBar);
+	resourceBarSprite->SetDesignSize(m_DesignWidthBar.X, m_DesignWidthBar.Y);
 	resourceBarSprite->SetPositionAbsolute(offset.X(), offset.Y());
 }
 
@@ -99,6 +106,7 @@ void ResourceBar::ResetValue()
 	
 	resourceBarSprite = graphics_engine->CreateSprite1(false,800);
 	resourceBarSprite->SetImage(assetResourceBar);
+	resourceBarSprite->SetDesignSize(m_DesignWidthBar.X, m_DesignWidthBar.Y);
 	resourceBarSprite->SetPositionAbsolute(offset.X(), offset.Y());
 }
 
@@ -113,6 +121,7 @@ void ResourceBar::SetResourceBarSprite()
 			
 			resourceBarSprite = graphics_engine->CreateSprite1(true,800);
 			resourceBarSprite->SetImage(assetResourceBarFull);
+			resourceBarSprite->SetDesignSize(m_DesignWidthBarFull.X, m_DesignWidthBarFull.Y);
 			resourceBarSprite->SetPositionAbsolute(offset.X(), offset.Y());
 		}
 		
@@ -127,6 +136,7 @@ void ResourceBar::SetResourceBarSprite()
 			
 			resourceBarSprite = graphics_engine->CreateSprite1(false,800);
 			resourceBarSprite->SetImage(assetResourceBar);
+			resourceBarSprite->SetDesignSize(m_DesignWidthBar.X, m_DesignWidthBar.Y);
 			resourceBarSprite->SetPositionAbsolute(offset.X(), offset.Y());
 		}
 		

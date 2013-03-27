@@ -27,6 +27,8 @@ public:
 
 	void SetSeconds(int _value) { m_seconds = _value; }
 	void SetFontAsset(int _asset);
+	void SetDesignSize(int _width, int _height) { numberFont->SetDesignSize(_width, _height); colonFont->SetDesignSize(_width, _height); }
+
 private:
 	CR::Math::PointF offset;
 	NumberFont *numberFont;

@@ -28,7 +28,8 @@ class CounterFont : public IRenderable
 		
 		//void operator++();
 		void SetMaxDigits(int _value);
-		
+		void SetDesignSize(int _width, int _height);
+
 	private:
 		CR::Math::PointF offset;
 		int m_count;

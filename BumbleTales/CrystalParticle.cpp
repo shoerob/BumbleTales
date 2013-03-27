@@ -24,30 +24,39 @@ CrystalParticle::CrystalParticle(CR::Math::PointF position, CrystalParticleStyle
 	{
 		case Leaf:
 			m_sprite->SetImage(CR::AssetList::Piece_Shatter_3);
+			m_sprite->SetDesignSize(28, 26);
 			break;
 		case Brick:
 			m_sprite->SetImage(CR::AssetList::Piece_Shatter_1);
+			m_sprite->SetDesignSize(28, 26);
 			break;
 		case Wood:
 			m_sprite->SetImage(CR::AssetList::Piece_Shatter_2);
+			m_sprite->SetDesignSize(28, 26);
 			break;
 		case Crystal:
 			m_sprite->SetImage(CR::AssetList::Piece_Shatter_4);
+			m_sprite->SetDesignSize(28, 26);
 			break;
 		case Diamond:
 			m_sprite->SetImage(CR::AssetList::Piece_Shatter_6);
+			m_sprite->SetDesignSize(28, 26);
 			break;
 		case Gold:
 			m_sprite->SetImage(CR::AssetList::Piece_Shatter_5);
+			m_sprite->SetDesignSize(28, 26);
 			break;
 		case MTile:
 			m_sprite->SetImage(CR::AssetList::Piece_Shatter_0);
+			m_sprite->SetDesignSize(28, 26);
 			break;
 		case QTile:
 			m_sprite->SetImage(CR::AssetList::Piece_Shatter_0);
+			m_sprite->SetDesignSize(28, 26);
 			break;
 		default:
 			m_sprite->SetImage(CR::AssetList::Piece_Shatter_0);
+			m_sprite->SetDesignSize(28, 26);
 	}
 
 	int xMod = 0;

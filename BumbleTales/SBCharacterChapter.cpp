@@ -19,10 +19,12 @@ SBCharacterChapter::SBCharacterChapter(bool wonGame)
 	
 	scrapbookTags = graphics_engine->CreateSprite1(false, 300);
 	scrapbookTags->SetImage(CR::AssetList::Scrapbook_Tags_1);
+	scrapbookTags->SetDesignSize(193, 23);
 	scrapbookTags->SetPositionAbsolute(104, 60);
 	
 	scrapbookTags2 = graphics_engine->CreateSprite1(false, 300);
 	scrapbookTags2->SetImage(CR::AssetList::Scrapbook_Tags_2);
+	scrapbookTags2->SetDesignSize(68, 16);
 	scrapbookTags2->SetPositionAbsolute(275, 60);
 	
 	hasWonGame = false;

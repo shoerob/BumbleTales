@@ -23,23 +23,27 @@ HelpMenuView::HelpMenuView(bool showCredits)
 	howToPlayButton = new Input_Button();
 	howToPlayButton->OnClicked += Delegate(this, &HelpMenuView::OnHowToPlayClicked);
 	howToPlayButton->SetSpriteAndBounds(161, 432, CR::AssetList::InfoHelp_How_to_Play_Button, 400);
+	howToPlayButton->DesignSize(157, 52);
 	howToPlayButton->SetSound(CR::AssetList::sounds::shopopen::ID);
 	input_objects.push_back(howToPlayButton);
 	
 	leftButton = new Input_Button();
 	leftButton->OnClicked += Delegate(this, &HelpMenuView::OnLeftClicked);
 	leftButton->SetSpriteAndBounds(2, 432, CR::AssetList::Scrapbook_LArrow_Button, 400);
+	leftButton->DesignSize(97, 49);
 	leftButton->SetSound(CR::AssetList::sounds::shopopen::ID);
 	input_objects.push_back(leftButton);
 	
 	rightButton = new Input_Button();
 	rightButton->OnClicked += Delegate(this, &HelpMenuView::OnRightClicked);
 	rightButton->SetSpriteAndBounds(221, 432, CR::AssetList::Scrapbook_RArrow_Button, 400);
+	rightButton->DesignSize(97, 49);
 	rightButton->SetSound(CR::AssetList::sounds::shopopen::ID);
 	input_objects.push_back(rightButton);
 	
 	menuBackground = graphics_engine->CreateSprite1(false,500);
 	menuBackground->SetImage(CR::AssetList::InfoHelp_Background);
+	menuBackground->SetDesignSize(320, 480);
 	menuBackground->SetPositionAbsolute(160, 240);
 	
 	m_currScreenSprite = graphics_engine->CreateSprite1(false,400);
@@ -99,18 +103,23 @@ void HelpMenuView::SetScreen(HelpMenuScreenType screenType)
 	{
 		case InfoHelpCredits:
 			m_currScreenSprite->SetImage(CR::AssetList::InfoHelp_Credits);
+			m_currScreenSprite->SetDesignSize(307, 420);
 			break;
 		case InfoHelp1:
 			m_currScreenSprite->SetImage(CR::AssetList::InfoHelp_Help1);
+			m_currScreenSprite->SetDesignSize(307, 417);
 			break;
 		case InfoHelp2:
 			m_currScreenSprite->SetImage(CR::AssetList::InfoHelp_Help2);
+			m_currScreenSprite->SetDesignSize(307, 417);
 			break;
 		case InfoHelp3:
 			m_currScreenSprite->SetImage(CR::AssetList::InfoHelp_Help3);
+			m_currScreenSprite->SetDesignSize(307, 417);
 			break;
 		case InfoHelp4:
 			m_currScreenSprite->SetImage(CR::AssetList::InfoHelp_Help4);
+			m_currScreenSprite->SetDesignSize(307, 417);
 			break;
 		default:
 			break;
@@ -123,6 +132,7 @@ void HelpMenuView::SetScreen(HelpMenuScreenType screenType)
 		rightButton->Disabled(true);
 		leftButton->Disabled(true);
 		exitButton->SetSpriteAndBounds(2, 432, CR::AssetList::InfoHelp_Main_Menu_Button, 400);
+		exitButton->DesignSize(157, 52);
 		m_currScreenSprite->SetPositionAbsolute(158, 213);
 	}
 	else
@@ -140,6 +150,7 @@ void HelpMenuView::SetScreen(HelpMenuScreenType screenType)
 			rightButton->Disabled(false);
 
 		exitButton->SetSpriteAndBounds(112, 432, CR::AssetList::Scrapbook_Exit_Button, 400);
+		exitButton->DesignSize(97, 49);
 		m_currScreenSprite->SetPositionAbsolute(156, 213);
 	}
 }

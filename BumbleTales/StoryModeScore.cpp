@@ -16,14 +16,17 @@ StoryModeScore::StoryModeScore()
 {
 	scoreBaseSprite = graphics_engine->CreateSprite1();
 	scoreBaseSprite->SetImage(CR::AssetList::Score_Base_1);
+	scoreBaseSprite->SetDesignSize(320, 480);
 	SetPosition(160, 240);
 	
 	okButton = new Input_Button();
 	okButton->SetSpriteAndBounds(96, 400, CR::AssetList::Score_Ok_Button);
+	okButton->DesignSize(128, 75);
 	okButton->OnClicked += Delegate(this, &StoryModeScore::OnOkButtonPressed);
 	input_objects.push_back(okButton);
 	
 	counterFont = new CounterFont(CR::AssetList::Font_Score_1,0,0);
+	counterFont->SetDesignSize(12, 16);
 }
 
 StoryModeScore::~StoryModeScore()

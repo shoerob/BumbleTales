@@ -14,12 +14,17 @@ extern CR::Graphics::GraphicsEngine *graphics_engine;
 
 StarMeter::StarMeter() : m_spriteHelper(CR::AssetList::Shop_Star_Meter_Indicator, false, 300)
 {
+	m_spriteHelper.SetDesignSize(22, 21);
+
 	meterSprite = graphics_engine->CreateSprite1(false,300);
 	meterSprite->SetImage(CR::AssetList::Shop_Star_Meter);
+	meterSprite->SetDesignSize(145, 38);
+
 	m_starCount = 0;
 	
 	starSprite = graphics_engine->CreateSprite1(false,300);
 	starSprite->SetImage(CR::AssetList::Shop_Star_Meter_Indicator);
+	starSprite->SetDesignSize(22, 21);
 	starSprite->SetFrameRate(10);
 	starSprite->SetAutoAnimate(true);
 	m_starIndicator = 0;
