@@ -70,8 +70,8 @@ namespace CR
 			virtual void AutoStopAnimate() = 0;
 			virtual int GetFrameSet() = 0;
 			virtual int GetFrame() = 0;
-			virtual int GetFrameWidth() = 0;
-			virtual int GetFrameHeight() = 0;
+			//virtual int GetFrameWidth() = 0;
+			//virtual int GetFrameHeight() = 0;
 			virtual void EnableFrameSkip(bool arg) = 0;
 			virtual void SetReverseAnimation(bool arg) = 0;
 			virtual void PauseAnimation(bool arg) = 0;

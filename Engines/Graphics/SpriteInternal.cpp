@@ -152,12 +152,19 @@ void SpriteInternal::Update()
 }
 
 void SpriteInternal::Render(vector<CR::Graphics::Vertex> &_vertices,std::vector<GLushort> &_indices)
-{
-	//if(disabled) return;
-	//if(auto_animate) AutoAnimate();
+{	
+	int width,height;
+	if(m_useDesignScale)
+	{
+		width = m_designWidth;
+		height = m_designHeight;
+	}
+	else
+	{
+		width = texture->width;
+		height = texture->height;
+	}
 
-	//(this->*blits[0])();
-	
 	GLfloat top,bot,left,right;
 	GetUVBounds(left,right,top,bot);
 	
@@ -182,20 +189,20 @@ void SpriteInternal::Render(vector<CR::Graphics::Vertex> &_vertices,std::vector<
 	_vertices[startVertex+3].U = right;
 	_vertices[startVertex+3].V = top;
 	
-	int xstart = x_position-160-(texture->width>>1);
-	int ystart = 240-y_position-(texture->height>>1);
+	int xstart = x_position-160-(width>>1);
+	int ystart = 240-y_position-(height>>1);
 	
 	_vertices[startVertex].X = xstart;
 	_vertices[startVertex].Y = ystart;
 	_vertices[startVertex].Z = -z_position;
-	_vertices[startVertex+1].X = xstart+texture->width;
+	_vertices[startVertex+1].X = xstart+width;
 	_vertices[startVertex+1].Y = ystart;
 	_vertices[startVertex+1].Z = -z_position;
 	_vertices[startVertex+2].X = xstart;
-	_vertices[startVertex+2].Y = ystart+texture->height;
+	_vertices[startVertex+2].Y = ystart+height;
 	_vertices[startVertex+2].Z = -z_position;
-	_vertices[startVertex+3].X = xstart+texture->width;
-	_vertices[startVertex+3].Y = ystart+texture->height;
+	_vertices[startVertex+3].X = xstart+width;
+	_vertices[startVertex+3].Y = ystart+height;
 	_vertices[startVertex+3].Z = -z_position;
 	
 	ProcessColor(_vertices,startVertex);
