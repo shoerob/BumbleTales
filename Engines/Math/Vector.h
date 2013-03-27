@@ -4,6 +4,19 @@ namespace CR
 {
 	namespace Math
 	{		
+		template<typename T>
+		struct Vector2
+		{
+			Vector2() : X(0), Y(0) {}
+			Vector2(int _x, int _y) : X(_x), Y(_y) {}
+
+			T X;
+			T Y;
+		};
+
+		typedef Vector2<int> int2;
+		typedef Vector2<float> float2;
+
 		template<class T>
 		class Vector3
 		{
