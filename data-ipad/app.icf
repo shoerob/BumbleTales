@@ -21,21 +21,21 @@ SplashscreenBkR=0
 SplashscreenBkG=0 
 SplashscreenBkB=0 
   
-MemSize = 15000000 
+MemSize = 60000000 
 MemSize7 = 60000 
 DispFixRot=Portrait
 SymbianOverideDeviceRot=0
 SoundStereo = 0
 SoundOutputFreq = 16000
 AudioAllowBackground = 1
-WinWidth=768
-WinHeight=1024
+WinWidth=640
+WinHeight=960
 SysGlesVersion=1
 WinFullScreen=0
 WinAllowAltEnter=1
 WinBpp=32
 IOSDispScaleFactor=200
 
-#[crconfig]
-#platform=ipad
-#use_scoreloop=false
+[crconfig]
+platform=ipad
+use_scoreloop=false
