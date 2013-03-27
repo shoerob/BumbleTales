@@ -33,3 +33,19 @@ E:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\bin\Release\HGFGenerato
 E:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\bin\Release\HGFGenerator.pdb
 E:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\obj\Release\GenerateResource.read.1.tlog
 E:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\obj\Release\GenerateResource.write.1.tlog
+E:\source\BumbleTales\Tools\iPhone Tools\iPhone Tools\bin\Release\iPhone Tools.exe.config
+E:\source\BumbleTales\Tools\iPhone Tools\iPhone Tools\obj\Release\iPhone Tools.exe
+E:\source\BumbleTales\Tools\iPhone Tools\iPhone Tools\obj\Release\iPhone Tools.pdb
+E:\source\BumbleTales\Tools\iPhone Tools\iPhone Tools\bin\Release\Settings.xml
+E:\source\BumbleTales\Tools\iPhone Tools\iPhone Tools\bin\Release\zlib1.dll
+E:\source\BumbleTales\Tools\iPhone Tools\iPhone Tools\bin\Release\iPhone Tools.exe
+E:\source\BumbleTales\Tools\iPhone Tools\iPhone Tools\bin\Release\iPhone Tools.pdb
+E:\source\BumbleTales\Tools\iPhone Tools\iPhone Tools\bin\Release\HGFGenerator.dll
+E:\source\BumbleTales\Tools\iPhone Tools\iPhone Tools\bin\Release\HGFGenerator.pdb
+E:\source\BumbleTales\Tools\iPhone Tools\iPhone Tools\obj\Release\iPhone Tools.csprojResolveAssemblyReference.cache
+E:\source\BumbleTales\Tools\iPhone Tools\iPhone Tools\obj\Release\iPhone_Tools.frmMain.resources
+E:\source\BumbleTales\Tools\iPhone Tools\iPhone Tools\obj\Release\iPhone_Tools.HGFPanel.resources
+E:\source\BumbleTales\Tools\iPhone Tools\iPhone Tools\obj\Release\iPhone_Tools.LevelPanel.resources
+E:\source\BumbleTales\Tools\iPhone Tools\iPhone Tools\obj\Release\iPhone_Tools.Properties.Resources.resources
+E:\source\BumbleTales\Tools\iPhone Tools\iPhone Tools\obj\Release\iPhone_Tools.QuickToolsPanel.resources
+E:\source\BumbleTales\Tools\iPhone Tools\iPhone Tools\obj\Release\iPhone Tools.csproj.GenerateResource.Cache

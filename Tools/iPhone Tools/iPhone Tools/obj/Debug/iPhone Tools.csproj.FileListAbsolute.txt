@@ -14,3 +14,6 @@ C:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\obj\Debug\iPhone_Tools.
 C:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\obj\Debug\iPhone Tools.csproj.GenerateResource.Cache
 C:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\obj\Debug\iPhone Tools.exe
 C:\source\bumbletalesair\Tools\iPhone Tools\iPhone Tools\obj\Debug\iPhone Tools.pdb
+E:\source\BumbleTales\Tools\iPhone Tools\iPhone Tools\bin\Debug\iPhone Tools.exe.config
+E:\source\BumbleTales\Tools\iPhone Tools\iPhone Tools\obj\Debug\iPhone Tools.exe
+E:\source\BumbleTales\Tools\iPhone Tools\iPhone Tools\obj\Debug\iPhone Tools.pdb

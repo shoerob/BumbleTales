@@ -85,7 +85,7 @@ namespace iPhone_Tools
                     int imageHeightDiff = newImageHeight - hptImage.Img_height;
 
                     // Determine if new frameset size is too large to be an iPhone OpenGL ES texture
-                    if (newImageWidth > 1024 || newFrameHeight > 1024)
+                    if (newImageWidth > 2048 || newFrameHeight > 2048)
                     {
                         LogManager.OnLogMessage(this, string.Format("Frameset texture size is too large for iPhone, {0} - ({1}, {2}), not converting.", hptImage.Full_path_name, newImageWidth, newFrameHeight));
                         continue;
