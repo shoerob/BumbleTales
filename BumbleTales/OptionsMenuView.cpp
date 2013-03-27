@@ -56,21 +56,18 @@ OptionsMenuView::OptionsMenuView(bool allowEraseData)
 	
 	// Checkboxes
 	hintsCheckbox = new CheckboxControl();
-	hintsCheckbox->SetSpriteAndPosition(CR::AssetList::Options_Check, 47, 90);
-	hintsCheckbox->DesignSize(76, 73);
+	hintsCheckbox->SetSpriteAndPosition(CR::AssetList::Options_Check, 47, 90, 76, 73);
 	hintsCheckbox->SetButtonBounds(30, 102, 70, 70);
 	input_objects.push_back(hintsCheckbox);
 	
 	musicCheckbox = new CheckboxControl();
-	musicCheckbox->SetSpriteAndPosition(CR::AssetList::Options_Check, 47, 194);
-	musicCheckbox->DesignSize(76, 73);
+	musicCheckbox->SetSpriteAndPosition(CR::AssetList::Options_Check, 47, 194, 76, 73);
 	musicCheckbox->SetButtonBounds(30, 207, 70, 70);
 	musicCheckbox->OnCheckChanged += Delegate(this, &OptionsMenuView::OnMusicToggled);
 	input_objects.push_back(musicCheckbox);
 	
 	soundCheckbox = new CheckboxControl();
-	soundCheckbox->SetSpriteAndPosition(CR::AssetList::Options_Check, 47, 300);
-	soundCheckbox->DesignSize(76, 73);
+	soundCheckbox->SetSpriteAndPosition(CR::AssetList::Options_Check, 47, 300, 76, 73);
 	soundCheckbox->SetButtonBounds(30, 313, 70, 70);
 	soundCheckbox->OnCheckChanged += Delegate(this, &OptionsMenuView::OnSoundToggled);
 	input_objects.push_back(soundCheckbox);

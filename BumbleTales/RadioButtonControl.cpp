@@ -51,8 +51,8 @@ void RadioButtonControl::SetPositionAndBounds(int x, int y, int width, int heigh
 	
 	//disabledSprite->SetPositionAbsolute(x - (width/2), y - (height/2));
 	//selectedSprite->SetPositionAbsolute(x - (width/2), y - (height/2));
-	disabledSprite->SetPositionAbsolute(bounds.left + (disabledSprite->GetFrameWidth()/2), bounds.top + (disabledSprite->GetFrameWidth()/2));
-	selectedSprite->SetPositionAbsolute(bounds.left + (disabledSprite->GetFrameWidth()/2), bounds.top + (disabledSprite->GetFrameWidth()/2));
+	disabledSprite->SetPositionAbsolute(bounds.left + (disabledSprite->DesignWidth()/2), bounds.top + (disabledSprite->DesignWidth()/2));
+	selectedSprite->SetPositionAbsolute(bounds.left + (disabledSprite->DesignWidth()/2), bounds.top + (disabledSprite->DesignWidth()/2));
 	
 	//checkSprite->SetPositionAbsolute(bounds.left + (checkSprite->GetFrameWidth()/2), bounds.top + (checkSprite->GetFrameHeight()/2));
 }

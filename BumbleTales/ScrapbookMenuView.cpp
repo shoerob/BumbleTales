@@ -32,13 +32,15 @@ ScrapbookMenuView::ScrapbookMenuView(bool wonGame)
 	
 	exitButton = new Input_Button();
 	exitButton->SetSpriteAndBounds(112, 432, CR::AssetList::Scrapbook_Exit_Button, 300);
+	exitButton->DesignSize(97, 49);
 	exitButton->OnClicked += Delegate(this, &ScrapbookMenuView::OnExitButtonClicked);
 	exitButton->SetSound(CR::AssetList::sounds::shopopen::ID);
 	input_objects.push_back(exitButton);
 	
 	prevButton = new Input_Button();
-	prevButton->SetSpriteAndBounds(6, 432, CR::AssetList::Scrapbook_LArrow_Button, 300);
+	//prevButton->SetSpriteAndBounds(6, 432, CR::AssetList::Scrapbook_LArrow_Button, 300);
 	prevButton->SetSpriteAndBounds(2, 432, CR::AssetList::Scrapbook_LArrow_Button, 400);
+	prevButton->DesignSize(97, 49);
 	prevButton->OnClicked += Delegate(this, &ScrapbookMenuView::OnPrevButtonClicked);
 	prevButton->SetSound(CR::AssetList::sounds::scrapbookpageturn1::ID);
 	input_objects.push_back(prevButton);
@@ -143,7 +145,7 @@ void ScrapbookMenuView::OnRecordsButtonClicked()
 	if (m_currChapter->GetChapterType() == RecordsChapter)
 		return;
 	
-	//UnregisterInput();
+	UnregisterInput();
 	delete m_currChapter;
 	m_currChapter = new SBRecordChapter();
 	((SBRecordChapter *)m_currChapter)->LoadFromArcadeSaveInfo(arcadeModeSaveInfo);
@@ -157,16 +159,16 @@ void ScrapbookMenuView::OnTrophiesButtonClicked()
 	if (m_currChapter->GetChapterType() == TrophiesChapter)
 		return;
 	
-	//UnregisterInput();
+	UnregisterInput();
 	delete m_currChapter;
 	m_currChapter = new SBTrophyChapter();
-	//input_objects.push_back((Input_Object*)m_currChapter);
+	input_objects.push_back((Input_Object*)m_currChapter);
 	((SBTrophyChapter *)m_currChapter)->LoadFromTrophySaveInfo(trophySaveInfo);
 	
 	rimSprite->SetPositionAbsolute(265, 25);
 }
 
-/*
+
 void ScrapbookMenuView::UnregisterInput()
 {
 	return;
@@ -175,7 +177,7 @@ void ScrapbookMenuView::UnregisterInput()
 		vector<Input_Object*>::iterator unregObject = find(input_objects.begin(), input_objects.end(), (Input_Object*)m_currChapter);
 		CR::Utility::UnorderedRemove(input_objects, unregObject);
 	}
-}*/
+}
 
 void ScrapbookMenuView::LoadFromSaveInfo(StoryModeSaveInfo *saveInfo)
 {

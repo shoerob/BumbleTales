@@ -30,7 +30,7 @@ ShopListing::ShopListing(int xLoc, int yLoc) : m_touchID(-1)
 	m_showInfoSprite = false;
 	
 	characterBonus = new CharacterBonus();
-	newEntrySplash = new SplashScreen(CR::AssetList::Shop_New_Entry_Message, 2, 250);
+	newEntrySplash = new SplashScreen(CR::AssetList::Shop_New_Entry_Message, 1.5, 250);
 	newEntrySplash->DesignSize(265, 90);
 	newEntrySplash->SetPosition(160, 240);
 	newEntrySplash->SplashFinished += Delegate(this, &ShopListing::OnNewEntrySplashFinished);

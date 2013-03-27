@@ -47,7 +47,7 @@ void CounterFont::Render()
 		//for (int i = 0; i < m_maxDigits; i++)
 	{
 		numberFont->SetFrame(digits[i]);
-		numberFont->SetPositionAbsolute(offset.X() + (dSign * numberFont->GetFrameWidth()) + (3 * dSign), offset.Y());
+		numberFont->SetPositionAbsolute(offset.X() + (dSign * numberFont->DesignWidth()) + (3 * dSign), offset.Y());
 		numberFont->Render();
 		
 		dSign++;

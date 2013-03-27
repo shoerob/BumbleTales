@@ -68,9 +68,9 @@ void NumberFont::RenderNumber(int _value)
 	if (m_align == AlignFontCenter)
 	{
 		if (digits.size() > 0)
-			xPos = offset.X() - ((digits.size() * numberSprite->GetFrameWidth())/2);
+			xPos = offset.X() - ((digits.size() * numberSprite->DesignWidth())/2);
 		else
-			xPos = offset.X() - (numberSprite->GetFrameWidth())/2;
+			xPos = offset.X() - (numberSprite->DesignWidth())/2;
 	}
 	else if (m_align == AlignFontRight)
 	{
@@ -79,9 +79,9 @@ void NumberFont::RenderNumber(int _value)
 	else if (m_align = AlignFontLeft)
 	{
 		if (digits.size() > 0)
-			xPos = offset.X() - ((digits.size() * numberSprite->GetFrameWidth()));
+			xPos = offset.X() - ((digits.size() * numberSprite->DesignWidth()));
 		else
-			xPos = offset.X() - (numberSprite->GetFrameWidth());
+			xPos = offset.X() - (numberSprite->DesignWidth());
 	}
 	
 	if (digits.size() == 0)
@@ -106,7 +106,7 @@ void NumberFont::RenderNumber(int _value)
 		//numberSprite->SetFrame(digit);
 		//numberSprite->Render();
 		
-		xPos += numberSprite->GetFrameWidth();
+		xPos += numberSprite->DesignWidth();
 	}
 	if(!m_helperLock)
 		m_spriteHelper.End();	

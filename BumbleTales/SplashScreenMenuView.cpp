@@ -19,7 +19,7 @@ extern Game* game_class;
 SplashScreenMenuView::SplashScreenMenuView()
 {
 	tandemSound = ISound::Instance().CreateSoundFX(CR::AssetList::sounds::tanlogo::ID);
-	m_splashScreen = new SplashScreen(CR::AssetList::Splash_Screen_1, 4.0f, 1000);
+	m_splashScreen = new SplashScreen(CR::AssetList::Splash_Screen_1, 1.5f, 1000);
 	m_splashScreen->DesignSize(320, 480);
 	m_splashScreen->SplashFinished += Delegate(this, &SplashScreenMenuView::OnSplashScreen1Done);
 	m_splashScreen->StartSplash();
@@ -45,7 +45,7 @@ void SplashScreenMenuView::OnSplashScreen1Done()
 {
 	m_splashScreen->SplashFinished.Clear();
 	m_splashScreen->SplashFinished += Delegate(this, &SplashScreenMenuView::OnSplashScreen2Done);
-	m_splashScreen->SetSplashAsset(CR::AssetList::Splash_Screen_2, 4.0f);
+	m_splashScreen->SetSplashAsset(CR::AssetList::Splash_Screen_2, 1.5f);
 	m_splashScreen->DesignSize(320, 480);
 	m_splashScreen->StartSplash();
 }

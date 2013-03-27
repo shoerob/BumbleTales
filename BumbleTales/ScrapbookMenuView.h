@@ -69,5 +69,5 @@ private:
 	ArcadeModeSaveInfo *arcadeModeSaveInfo;
 	TrophySaveInfo *trophySaveInfo;
 	
-	//void UnregisterInput();
+	void UnregisterInput();
 };

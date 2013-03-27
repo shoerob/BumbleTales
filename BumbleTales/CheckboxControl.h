@@ -25,7 +25,7 @@ public:
 	void Reset();
 	void FreeResources();
 	
-	void SetSpriteAndPosition(int nSprite, int xLoc, int yLoc);
+	void SetSpriteAndPosition(int nSprite, int xLoc, int yLoc, int _designWidth, int _designHeight);
 	void SetButtonBounds(float left, float top, float width, float height);
 	void SetSpriteAndBounds(float left, float top, int nSprite);
 	

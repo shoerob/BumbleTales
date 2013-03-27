@@ -43,10 +43,10 @@ void TrophyButton::SetPosition(int xLoc, int yLoc)
 	
 	trophySprite->SetPositionAbsolute(xLoc, yLoc);
 	
-	bounds.top = yLoc - trophySprite->GetFrameHeight() / 2;
-	bounds.bottom = trophySprite->GetFrameHeight();
-	bounds.left = xLoc - trophySprite->GetFrameWidth() / 2;
-	bounds.right = trophySprite->GetFrameWidth();
+	bounds.top = yLoc - trophySprite->DesignHeight() / 2;
+	bounds.bottom = trophySprite->DesignHeight();
+	bounds.left = xLoc - trophySprite->DesignWidth() / 2;
+	bounds.right = trophySprite->DesignWidth();
 }
 
 void TrophyButton::SetHasTrophy(bool hasTrophy)

@@ -76,8 +76,8 @@ void SBTrophyChapter::Render()
 	
 	pageTags->Render();
 	
-	if (selectedTrophy != -1)
-		trophyInfo->Render();
+	//if (selectedTrophy != -1)
+	//	trophyInfo->Render();
 
 	int tOffset = currPageNum * 12;
 	for (int i = tOffset; i < tOffset + 12; i++)
@@ -155,6 +155,16 @@ void SBTrophyChapter::SetupTrophies()
 		}
 	}
 }
+
+void SBTrophyChapter::TouchesBeganImpl(Touch &_touches)
+{
+	int tOffset = currPageNum * 12;
+	for (int i = tOffset; i < tOffset + 12; i++)
+	{
+		trophyButtons[i]->TouchesBeganImpl(_touches);
+	}
+}
+
 /*
 void SBTrophyChapter::TouchesBeganImpl(UIView *view, NSSet *touches)
 {

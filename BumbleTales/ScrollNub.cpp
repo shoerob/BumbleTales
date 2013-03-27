@@ -52,10 +52,10 @@ void ScrollNub::SetPosition(float xLoc, float yLoc)
 	offset.Y(yLoc);
 	nubSprite->SetPositionAbsolute(offset.X(), offset.Y());
 	
-	bounds.top = yLoc - nubSprite->GetFrameHeight() / 2 - 10;
-	bounds.bottom = nubSprite->GetFrameHeight() + 20;
-	bounds.left = xLoc - nubSprite->GetFrameWidth() / 2 - 10;
-	bounds.right = nubSprite->GetFrameWidth() + 20; 
+	bounds.top = yLoc - nubSprite->DesignHeight() / 2 - 10;
+	bounds.bottom = nubSprite->DesignHeight() + 20;
+	bounds.left = xLoc - nubSprite->DesignWidth() / 2 - 10;
+	bounds.right = nubSprite->DesignWidth() + 20; 
 }
 
 void ScrollNub::PauseAnimation(bool pause)

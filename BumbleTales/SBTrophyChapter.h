@@ -34,10 +34,8 @@ public:
 	void LoadFromTrophySaveInfo(TrophySaveInfo *saveInfo);
 
 	// Input_Object
-	/*void TouchesBeganImpl(UIView *view, NSSet *touches);
-	void TouchesMovedImpl(UIView *view, NSSet *touches);
-	void TouchesEndedImpl(UIView *view, NSSet *touches);
-	void TouchesCancelledImpl(UIView *view, NSSet *touches);*/
+	virtual void TouchesBeganImpl(Touch &_touches);
+
 	void Reset(){};
 	void FreeResources(){};
 	

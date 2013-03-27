@@ -72,10 +72,10 @@ void ShopItem::SetPosition(float xLoc, float yLoc)
 	starMeter->SetPosition(offset.X() + 10, offset.Y() + 15);
 	plusButton->SetPosition(offset.X() + 82, offset.Y() - 5);
 	plusDimmerSprite->SetPositionAbsolute(offset.X() + 100, offset.Y() + 13);
-	bounds.top = yLoc - itemSprite->GetFrameHeight() / 2;
-	bounds.bottom = itemSprite->GetFrameHeight();
-	bounds.left = xLoc - itemSprite->GetFrameWidth() / 2;
-	bounds.right = itemSprite->GetFrameWidth();
+	bounds.top = yLoc - itemSprite->DesignHeight() / 2;
+	bounds.bottom = itemSprite->DesignHeight();
+	bounds.left = xLoc - itemSprite->DesignWidth() / 2;
+	bounds.right = itemSprite->DesignWidth();
 }
 
 void ShopItem::PauseAnimation(bool pause)

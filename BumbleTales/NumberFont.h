@@ -29,7 +29,7 @@ public:
 	void SetMinDigits(int _value);
 	int GetMinDigits() const;
 	void SetAlignment(FontAlignment _value);
-	int GetDigitWidth() { return numberSprite->GetFrameWidth(); }
+	int GetDigitWidth() { return numberSprite->DesignWidth(); }
 	void Begin();
 	void End();
 	void SetFontAsset(int _asset);

@@ -115,11 +115,11 @@ void BuildingButtonControl::SetPosition(int xLoc, int yLoc)
 	Rect r;
 	r.top = yLoc;
 	r.left = xLoc;
-	r.bottom = buttonSprite->GetFrameHeight();
-	r.right = buttonSprite->GetFrameWidth();
+	r.bottom = buttonSprite->DesignWidth();
+	r.right = buttonSprite->DesignWidth();
 	bounds = r;
 	
-	buttonSprite->SetPositionAbsolute(bounds.left + (buttonSprite->GetFrameWidth()/2), bounds.top + (buttonSprite->GetFrameHeight()/2));
+	buttonSprite->SetPositionAbsolute(bounds.left + (buttonSprite->DesignWidth()/2), bounds.top + (buttonSprite->DesignHeight()/2));
 }
 
 void BuildingButtonControl::PauseAnimation(bool pause)
@@ -143,7 +143,7 @@ void BuildingButtonControl::ShowBuildAnimation()
 	buildSprite->SetDesignSize(66, 36);
 	buildSprite->SetAutoAnimate(true);
 	buildSprite->SetFrame(0);
-	buildSprite->SetPositionAbsolute(bounds.left + (buttonSprite->GetFrameWidth()/2), bounds.top + (buttonSprite->GetFrameHeight()/2));
+	buildSprite->SetPositionAbsolute(bounds.left + (buttonSprite->DesignWidth()/2), bounds.top + (buttonSprite->DesignHeight()/2));
 	buildSprite->AutoStopAnimate();
 	
 	fadeColor = CR::Math::Color32(255, 255, 255, 0);

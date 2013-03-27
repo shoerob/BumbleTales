@@ -65,6 +65,7 @@ void ArcadeModeSaveInfo::Save()
 	fwrite(&m_largestMatch, 1, sizeof(m_largestMatch), file);
 	fwrite(&m_maxPointsOnOneMove, 1, sizeof(m_maxPointsOnOneMove), file);
 	fwrite(&m_maxMovesInSession, 1, sizeof(m_maxMovesInSession), file);
+	fwrite(&m_maxPowerUsedInSession, 1, sizeof(m_maxPowerUsedInSession), file);
 	fwrite(&m_longestSessionTime, 1, sizeof(m_longestSessionTime), file);
 	fwrite(&m_totalPlayTime, 1, sizeof(m_totalPlayTime), file);
 	fwrite(&m_blocksCleared[0], sizeof(int), m_blocksCleared.size(), file);
@@ -122,6 +123,7 @@ void ArcadeModeSaveInfo::Load()
 		fread(&m_largestMatch, 1, sizeof(m_largestMatch), file);
 		fread(&m_maxPointsOnOneMove, 1, sizeof(m_maxPointsOnOneMove), file);
 		fread(&m_maxMovesInSession, 1, sizeof(m_maxMovesInSession), file);
+		fread(&m_maxPowerUsedInSession, 1, sizeof(m_maxPowerUsedInSession), file);
 		fread(&m_longestSessionTime, 1, sizeof(m_longestSessionTime), file);
 		fread(&m_totalPlayTime, 1, sizeof(m_totalPlayTime), file);
 		fread(&m_blocksCleared[0], sizeof(int), m_blocksCleared.size(), file);

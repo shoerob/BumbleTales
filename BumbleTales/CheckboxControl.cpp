@@ -24,10 +24,11 @@ CheckboxControl::~CheckboxControl()
 	checkSprite->Release();
 }
 
-void CheckboxControl::SetSpriteAndPosition(int nSprite, int xLoc, int yLoc)
+void CheckboxControl::SetSpriteAndPosition(int nSprite, int xLoc, int yLoc, int _designWidth, int _designHeight)
 {
 	checkSprite->SetImage(nSprite);
-	checkSprite->SetPositionAbsolute(xLoc + (checkSprite->GetFrameWidth()/2), yLoc + (checkSprite->GetFrameHeight()/2));
+	checkSprite->SetDesignSize(_designWidth, _designHeight);
+	checkSprite->SetPositionAbsolute(xLoc + (checkSprite->DesignWidth()/2), yLoc + (checkSprite->DesignHeight()/2));
 }
 
 void CheckboxControl::SetButtonBounds(float left, float top, float width, float height)
@@ -47,11 +48,11 @@ void CheckboxControl::SetSpriteAndBounds(float left, float top, int nSprite)
 	Rect r;
 	r.top = top;
 	r.left = left;
-	r.bottom = checkSprite->GetFrameHeight();
-	r.right = checkSprite->GetFrameWidth();
+	r.bottom = checkSprite->DesignHeight();
+	r.right = checkSprite->DesignWidth();
 	bounds = r;
 
-	checkSprite->SetPositionAbsolute(bounds.left + (checkSprite->GetFrameWidth()/2), bounds.top + (checkSprite->GetFrameHeight()/2));
+	checkSprite->SetPositionAbsolute(bounds.left + (checkSprite->DesignWidth()/2), bounds.top + (checkSprite->DesignHeight()/2));
 }
 
 void CheckboxControl::Render()

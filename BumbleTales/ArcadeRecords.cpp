@@ -29,6 +29,7 @@ ArcadeRecords::ArcadeRecords()
 	
 	timeDisplay = new TimeDisplay();
 	timeDisplay->SetFontAsset(CR::AssetList::Scrapbook_Font_Records_1);
+	timeDisplay->SetDesignSize(12, 16);
 }
 
 ArcadeRecords::~ArcadeRecords()

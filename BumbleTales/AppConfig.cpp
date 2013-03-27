@@ -17,6 +17,6 @@ AppConfigSingleton::AppConfigSingleton() : m_UseScoreLoop(false)
 		m_platformType = PHONE;
 	
 	s3eConfigGetString("crconfig","use_scoreloop",value);
-	if(stricmp(value, "true"))
+	if(stricmp(value, "true") == 0)
 		m_UseScoreLoop = true;
 }
